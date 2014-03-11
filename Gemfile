@@ -4,8 +4,17 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
+group :test, :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails', '4.2.1'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
