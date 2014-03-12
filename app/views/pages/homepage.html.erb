@@ -9,3 +9,12 @@
   <%= text_field_tag(:search) %>
   <%= submit_tag("Search") %>
 <% end %>  -->
+
+<%if user_signed_in?%>
+  <li>
+    Logged in
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
+  </li>
+<%end%>
+<h1>Welcome to ProductPedia</h1>
+
