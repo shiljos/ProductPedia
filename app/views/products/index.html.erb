@@ -4,7 +4,7 @@
     <% @products.each do |product| %>
       <li>
       	<%= product.name %>
-        <%= link_to('View Product', product_path(product.id), method: :get)%>
+        <%= link_to('View Product', product_path(product.id))%>
       </li>    
     <%end%>
   </ul>

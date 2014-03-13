@@ -1,1 +1,19 @@
-<div><p><%= @product.description %></p></div>
+<div><p class="description"><%= @product.description %></p></div>
+
+
+<%= form_for @product do |f| %>
+  <%= f.label :name %><br/>
+  <%= f.text_field :name %><br/>
+  <%= f.label :description %><br/>
+  <%= f.text_field :description %><br/>
+  <%= f.submit "Submit change", method: :patch %>
+<% end %>
+
+
+ <%= form_tag(favorite_product_path(@product), method: "post") do %>
+ <%= submit_tag("Add to favorites") %>
+<% end %> 
+
+<!-- <% if product_is_favorite(current_user,@product) %>
+ <p class="favorite"></p>
+<%end%> -->
