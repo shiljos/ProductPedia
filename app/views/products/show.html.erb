@@ -10,10 +10,13 @@
 <% end %>
 
 
- <%= form_tag(favorite_product_path(@product), method: "post") do %>
+<%= form_tag(favorite_product_path(@product), method: "post") do %>
  <%= submit_tag("Add to favorites") %>
 <% end %> 
 
-<!-- <% if product_is_favorite(current_user,@product) %>
- <p class="favorite"></p>
-<%end%> -->
+<%= current_user.id %>
+
+<% if product_is_favorite(current_user,@product) %>
+ <p class="favorite"> <%= @product.name %> </p>
+ 
+<%end%>

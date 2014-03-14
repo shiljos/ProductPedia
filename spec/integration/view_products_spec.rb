@@ -15,6 +15,7 @@ end
 feature "View product" do
 	scenario "allows user to see product information" do
 		@product = FactoryGirl.create(:product)
+    sign_in
 		visit products_path
 		click_link('View Product')
 		expect(page).to have_css '.description', text: @product.description
@@ -24,6 +25,7 @@ end
 feature "Edit product description" do
 	scenario "allows user to edit product description" do
 		@product = FactoryGirl.create(:product)
+    sign_in
 		visit product_path(@product)
 		fill_in 'product_description', with: 'new product_7 description'
 		click_button 'Submit change'

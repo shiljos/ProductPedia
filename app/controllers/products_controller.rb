@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  skip_before_filter :authenticate_user!, only: [:index, :show, :update]
+  skip_before_filter :authenticate_user!, only: [:index, :update]
 
   def favorite
   	@product = Product.find(params[:id])
