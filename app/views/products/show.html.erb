@@ -1,22 +1,29 @@
 <div><p class="description"><%= @product.description %></p></div>
 
 
-<%= form_for @product do |f| %>
-  <%= f.label :name %><br/>
-  <%= f.text_field :name %><br/>
-  <%= f.label :description %><br/>
-  <%= f.text_field :description %><br/>
-  <%= f.submit "Submit change", method: :patch %>
-<% end %>
+<% if user_signed_in? %>
+	<%= form_for @product do |f| %>
+	  <%= f.label :name %><br/>
+	  <%= f.text_field :name %><br/>
+	  <%= f.label :description %><br/>
+	  <%= f.text_field :description %><br/>
+	  <%= f.submit "Submit change", method: :patch %>
+	<% end %>
 
+	<%= form_tag(favorite_product_path(@product), method: :post) do %>
+	  <%= submit_tag("Add to favorites") %>
+	<% end %> 
 
-<%= form_tag(favorite_product_path(@product), method: "post") do %>
- <%= submit_tag("Add to favorites") %>
-<% end %> 
-
-<%= current_user.id %>
-
-<% if product_is_favorite(current_user,@product) %>
- <p class="favorite"> <%= @product.name %> </p>
- 
+  <% if product_is_favorite(current_user, @product) %>
+    <p class="favorite"> <%= @product.name %> </p>
+    <%= current_user.id %>
+    <%= link_to('Remove product from favorites', remove_favorite_product_path(@product),																																					method: :delete)%>
+  <%end%>
+<%else%>
+	<%= form_for @product do |f| %>
+	  <%= f.label :name %><br/>
+	  <%= f.text_field :name %><br/>
+	  <%= f.label :description %><br/>
+	  <%= f.text_field :description %><br/>
+	<%end%>
 <%end%>

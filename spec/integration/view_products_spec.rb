@@ -2,10 +2,9 @@ require 'spec_helper'
 
 feature "Products list" do
   scenario "allows user to see all products" do
-  	5.times { FactoryGirl.create(:product) }
+  	@products = FactoryGirl.create_list(:product, 5)
     visit products_path
-   # expect(page).to have_css 'h1', text: 'Products' 
-    Product.all.each do |prod|
+    @products.each do |prod|
     	expect(page).to have_selector('li', text: prod.name)
     	expect(page).to have_link("View Product", href: product_path(prod)) 
     end
@@ -36,9 +35,28 @@ end
 
 feature "Add favorite product" do
   scenario "allows user to add a product to favorite list" do
-  	@product = FactoryGirl.create(:product)
-  	sign_in
-    visit product_path(@product)
-    expect(page).to have_css '.favorite'
+    @product = FactoryGirl.create(:product)
+    add_favorite
+    expect(page).to have_css '.favorite', text: @product.name
+  end
+end
+
+feature "Remove favorite product" do
+  scenario "allows user to remove product from favorite list" do
+    @product = FactoryGirl.create(:product)
+    add_favorite
+    click_link 'Remove product from favorites'
+    expect(page).not_to have_css '.favorite', text:@product.name
+  end
+end
+
+feature "Search products" do
+  scenario "allows user to search for products" do
+    @products = FactoryGirl.create_list(:product, 5)
+    visit products_path
+    fill_in 'search', with: @products.first.name
+    click_button 'Search'
+    expect(page).to have_css '.result', text: @products.first.name
+    expect(page).to have_css '.result', count: 1
   end
 end

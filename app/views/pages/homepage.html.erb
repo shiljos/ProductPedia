@@ -11,9 +11,24 @@
 <% end %>  -->
 
 <%if user_signed_in?%>
-  <li>
+  <li class="login">
     Logged in
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>     
+  </li>
+  <li>
+    <%= link_to('Products', products_path, method: :get) %>     
+  </li>
+<%else%>
+  <li>
+    Sign in
+    <%= link_to('Sign_in', new_user_session_path, method: :get) %>
+  </li>
+  <li>
+    Sign up
+    <%= link_to('Sign up',new_user_registration_path, method: :get) %>
+  </li>
+  <li>
+      <%= link_to('Products', products_path, method: :get) %>
   </li>
 <%end%>
 <h1>Welcome to ProductPedia</h1>
