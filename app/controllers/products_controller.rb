@@ -17,6 +17,10 @@ class ProductsController < ApplicationController
     redirect_to @product
   end
 
+  def create
+
+  end
+
   def index
   	#@products = Product.all
     @products = Product.search(params[:search])
@@ -41,6 +45,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:description)
+    params.require(:product).permit(:description, :picture)
   end
 end

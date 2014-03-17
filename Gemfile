@@ -7,6 +7,7 @@ gem 'rails', '4.0.3'
 gem 'pg'
 gem 'high_voltage'
 gem 'devise'
+gem "paperclip", "~> 4.1"
 
 group :test, :development do
   gem 'rspec-rails'

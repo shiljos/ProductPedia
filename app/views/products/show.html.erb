@@ -1,5 +1,6 @@
 <div><p class="description"><%= @product.description %></p></div>
 
+<%= image_tag @product.picture.url(:medium) %>
 
 <% if user_signed_in? %>
 	<%= form_for @product do |f| %>
@@ -7,6 +8,7 @@
 	  <%= f.text_field :name %><br/>
 	  <%= f.label :description %><br/>
 	  <%= f.text_field :description %><br/>
+	  <%= f.file_field :picture %><br/>
 	  <%= f.submit "Submit change", method: :patch %>
 	<% end %>
 
@@ -17,7 +19,7 @@
   <% if product_is_favorite(current_user, @product) %>
     <p class="favorite"> <%= @product.name %> </p>
     <%= current_user.id %>
-    <%= link_to('Remove product from favorites', remove_favorite_product_path(@product),																																					method: :delete)%>
+    <%= link_to('Remove product from favorites', remove_favorite_product_path(@product),																																				method: :delete)%>
   <%end%>
 <%else%>
 	<%= form_for @product do |f| %>
@@ -25,5 +27,6 @@
 	  <%= f.text_field :name %><br/>
 	  <%= f.label :description %><br/>
 	  <%= f.text_field :description %><br/>
+	  <%= f.file_field :picture %>
 	<%end%>
 <%end%>

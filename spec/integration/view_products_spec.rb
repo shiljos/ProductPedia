@@ -50,6 +50,40 @@ feature "Remove favorite product" do
   end
 end
 
+feature "Check favorites" do
+  scenario " testing if a logged in user sees favorites of other user" do
+    @product = FactoryGirl.create(:product)
+    @user_1 = FactoryGirl.create(:user)
+    @user_2 = FactoryGirl.create(:user) 
+    sign_in_as(@user_1)
+    click_link 'Products'
+    click_link 'View Product'
+    add_favorite_as(@user_1, @product)
+    visit root_path
+    click_link 'Logout'
+    click_link 'Sign in'
+    sign_in_as(@user_2)
+    click_link 'Products'
+    click_link 'View Product'
+    expect(page).not_to have_css '.favorite', text: @product.name
+  end
+
+  scenario "checks if a favorite can be deleted from another user" do
+    @product = FactoryGirl.create(:product)
+    @user_1 = FactoryGirl.create(:user)
+    @user_2 = FactoryGirl.create(:user) 
+    sign_in_as(@user_1)
+    click_link 'Products'
+    click_link 'View Product'
+    add_favorite_as(@user_1, @product)
+    visit root_path
+    click_link 'Logout'
+    click_link 'Sign in'
+    sign_in_as(@user_2)
+    expect{page.driver.submit :delete, remove_favorite_product_path(@product), {}}.not_to change {Favorite.count}
+  end
+end
+
 feature "Search products" do
   scenario "allows user to search for products" do
     @products = FactoryGirl.create_list(:product, 5)
