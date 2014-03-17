@@ -1,0 +1,790 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"add",
+				"add_favorite"
+			],
+			[
+				"pa",
+				"page"
+			],
+			[
+				"click",
+				"click_link"
+			],
+			[
+				"shared",
+				"shared_path"
+			],
+			[
+				"unicorn",
+				"unicorn_init"
+			],
+			[
+				"unico",
+				"unicorn_pid"
+			],
+			[
+				"cap",
+				"capistrano"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"create",
+				"create_database"
+			],
+			[
+				"postgres",
+				"postgresql"
+			],
+			[
+				"ap",
+				"application"
+			],
+			[
+				"se",
+				"set_default"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"red",
+				"redirect_to"
+			],
+			[
+				"remem",
+				"remember_token"
+			],
+			[
+				"have_",
+				"have_content"
+			],
+			[
+				"al",
+				"alert-error"
+			],
+			[
+				"have",
+				"have_selector"
+			],
+			[
+				"sess",
+				"session"
+			],
+			[
+				"signin",
+				"signin_path"
+			],
+			[
+				"gravatar",
+				"gravatar_url"
+			],
+			[
+				"be",
+				"be_valid"
+			],
+			[
+				"cont",
+				"contact_path"
+			],
+			[
+				"help",
+				"help_path"
+			],
+			[
+				"st",
+				"static_pages"
+			],
+			[
+				"i",
+				"it"
+			],
+			[
+				"hav",
+				"have_content"
+			],
+			[
+				"gre",
+				"greeting"
+			],
+			[
+				"ge",
+				"gets"
+			],
+			[
+				"centr",
+				"central_corridor"
+			],
+			[
+				"wh",
+				"while	while ... end"
+			],
+			[
+				"cet",
+				"central_corridor"
+			],
+			[
+				"cla",
+				"cla	class .. end"
+			],
+			[
+				"E",
+				"Employee"
+			],
+			[
+				"PH",
+				"PHRASE_FIRST"
+			],
+			[
+				"sni",
+				"snippet"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"class",
+				"class_names"
+			],
+			[
+				"craf",
+				"craft_names"
+			],
+			[
+				"rand",
+				"rand_words"
+			],
+			[
+				"para",
+				"param_count"
+			],
+			[
+				"sin",
+				"sing_me_a_song"
+			],
+			[
+				"Ab",
+				"abbreviation"
+			],
+			[
+				"abbre",
+				"abbrev"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"gol",
+				"gold_room"
+			],
+			[
+				"bear_",
+				"bear_move"
+			],
+			[
+				"nu",
+				"numbers"
+			],
+			[
+				"first",
+				"first_and_last_sorted"
+			],
+			[
+				"print_f",
+				"print_firs_and_last"
+			],
+			[
+				"print_l",
+				"print_last_word"
+			],
+			[
+				"sort_",
+				"sort_sentence"
+			],
+			[
+				"split",
+				"split_words"
+			],
+			[
+				"sort",
+				"sort_words"
+			],
+			[
+				"wor",
+				"word"
+			],
+			[
+				"sta",
+				"start_point"
+			],
+			[
+				"je",
+				"jelly_beans"
+			],
+			[
+				"mul",
+				"multy"
+			],
+			[
+				"cu",
+				"curr_file"
+			],
+			[
+				"print",
+				"print_line"
+			],
+			[
+				"cur",
+				"curr_line"
+			],
+			[
+				"curr",
+				"curr_file"
+			],
+			[
+				"input",
+				"input_file"
+			],
+			[
+				"line",
+				"curr_line"
+			],
+			[
+				"cheese",
+				"cheese_and_crackers"
+			],
+			[
+				"chees",
+				"cheese_and_crackers"
+			],
+			[
+				"chee",
+				"cheese_count"
+			],
+			[
+				"car",
+				"carpool_capacity"
+			],
+			[
+				"cars",
+				"cars_not_driven"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"previe",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"previ",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"pre",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"previeew",
+				"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"previee",
+				"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"previre",
+				"SublimeLinter: Previous Error"
+			],
+			[
+				"markdown c",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"PREVIEW",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"set",
+				"Set Syntax: Ruby"
+			],
+			[
+				"se",
+				"Set Syntax: Ruby"
+			],
+			[
+				"prev",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preie",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"prevview",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"previw",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preveiew",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preiew",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"prview",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"peview",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"g",
+				"Gist: Update File"
+			],
+			[
+				"op",
+				"Gist: Open Gist"
+			],
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"open",
+				"Gist: Open Gist"
+			],
+			[
+				"ope",
+				"Gist: Open Gist"
+			],
+			[
+				"gis",
+				"Gist: Create Public Gist"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sni",
+				"Snippet: html"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp",
+				"Snippet: For Loop"
+			],
+			[
+				"sni	",
+				"Snippet: struct"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"minima",
+				"View: Toggle Minimap"
+			],
+			[
+				"sideb",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/shbuntu/rails/railstest/ProductPedia/log/development.log",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/favorite_product_helpers.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/user_sign_out_spec.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/routes.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/pages/homepage.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/application_controller.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/application.js",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/spec_helper.rb",
+		"/home/shbuntu/rails/danieltest",
+		"/home/shbuntu/rails/railstest/mdown/contorllers.md",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tasks/postgresql.cap",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/substitute_strings.rb",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/template.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy/shared/database.yml.erb",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/templates/rbenv_init",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy/shared/postgresql.yml.erb",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tasks/base.cap",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tempplate.rb",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tasks/test.cap",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy/production.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy.rb",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tasks/unicorn.cap",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy/shared/unicorn_init.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy/shared/unicorn.rb.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/deploy/shared/nginx_unicorn.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/nodejs.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/rbenv.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/templates/unicorn.rb.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/templates/unicorn_init.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/postgresql.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/unicorn.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/base.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/templates/nginx_unicorn.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/nginx.rb",
+		"/home/shbuntu/rails/railstest/dep_app/Gemfile",
+		"/home/shbuntu/rails/railstest/dep_app/Capfile",
+		"/home/shbuntu/rails/railstest/dep_app/config/database.yml",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/templates/postgresql.yml.erb",
+		"/home/shbuntu/rails/railstest/dep_app/config/environments/production.rb",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/templates/rbenv_init",
+		"/home/shbuntu/rails/railstest/dep_app/config/recipes/check.rb",
+		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tasks/hello.cap",
+		"/home/shbuntu/rails/railstest/blog/config/deploy/production.rb",
+		"/home/shbuntu/rails/railstest/blog/config/unicorn.rb",
+		"/home/shbuntu/rails/railstest/blog/config/nginx.conf",
+		"/home/shbuntu/rails/railstest/blog/app/views/articles/index.html.erb",
+		"/home/shbuntu/rails/railstest/blog/config/deploy.rb",
+		"/home/shbuntu/rails/railstest/mdown/callbacks_note.html",
+		"/home/shbuntu/rails/railstest/blog/config/initializers/inflections.rb",
+		"/home/shbuntu/rails/railstest/blog/config/unicorn_init.sh",
+		"/home/shbuntu/rails/railstest/blog/Gemfile",
+		"/home/shbuntu/rails/railstest/blog/Capfile",
+		"/home/shbuntu/rails/railstest/test_f/test_f_app/Gemfile",
+		"/home/shbuntu/rails/railstest/test_f/test_f_app/config/deploy/production.rb",
+		"/home/shbuntu/rails/railstest/test_f/test_f_app/config/deploy.rb",
+		"/home/shbuntu/rails/railstest/test_f/test_f_app/lib/capistrano/tasks/hellou.cap",
+		"/home/shbuntu/rails/railstest/test_f/test_f_app/Capfile",
+		"/home/shbuntu/.config/sublime-text-3/Packages/User/MarkdownPreview.sublime-settings",
+		"/home/shbuntu/rails/railstest/sample_app/config/callbacks.html",
+		"/home/shbuntu/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/home/shbuntu/rails/railstest/sample_app/tmp/cache/assets/development/sass/6027a5963d83fb83803552134dc1f14976468e4e/_progress-bars.scssc",
+		"/home/shbuntu/rails/railstest/sample_app/config/environments/production.rb",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140204085326_add_remember_token_to_users.rb",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140206081448_add_admin_to_users.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/models/micropost.rb",
+		"/home/shbuntu/rails/railstest/sample_app/config/routes.rb",
+		"/home/shbuntu/rails/railstest/sample_app/Gemfile",
+		"/home/shbuntu/rails/railstest/sample_app/spec/requests/authentication_pages_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/controllers/users_controller.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/requests/static_pages_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/requests/user_pages_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/lib/tasks/sample_data.rake",
+		"/home/shbuntu/rails/railstest/sample_app/app/controllers/application_controller.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/controllers/relationships_controller_spec.rb",
+		"/home/shbuntu/Desktop/rby/code/chap01/ex1_cars_demo.rb",
+		"/home/shbuntu/rails/railstest/sample_app/db/schema.rb",
+		"/home/shbuntu/rails/railstest/new_app/config/initializers/filter_parameter_logging.rb",
+		"/home/shbuntu/rails/railstest/new_app/tmp/cache/assets/development/sprockets/f5a70289c0a0c346d3cc57416cb36697",
+		"/home/shbuntu/rails/railstest/sample_app/app/controllers/relationships_controller.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/controllers/static_pages_controller.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/models/user.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/models/relationship.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/models/user_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/models/relationship_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/controllers/microposts_controller.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/relationships/create.js.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/relationships/destroy.js.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_unfollow.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_follow.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/show_follow.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_stats.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/static_pages/home.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/show.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140207092619_create_relationships.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_unfollow_html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_follow_form.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/home/shbuntu/rails/railstest/sample_app/spec/requests/micropost_pages_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/models/micropost_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/helpers/sessions_helper.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/microposts/_micropost.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_feed.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_feed_item.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_error_messages.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/edit.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/new.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/index.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_micropost_form.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_user_info.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/factories.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/models/microposts_spec.rb",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140206102436_create_microposts.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/controllers/sessions_controller.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/layouts/_header.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_user.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/helpers/users_helper.rb",
+		"/home/shbuntu/rails/railstest/sample_app/spec/support/utilities.rb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/users/new.htmpl.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/layouts/application.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/app/assets/javascripts/application.js",
+		"/home/shbuntu/rails/railstest/sample_app/app/views/sessions/new.html.erb",
+		"/home/shbuntu/rails/railstest/sample_app/-e",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140131080203_create_users.rb",
+		"/home/shbuntu/rails/railstest/sample_app/config/environments/test.rb",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140131125642_add_password_digest_to_users.rb",
+		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140131124105_add_index_to_users_email.rb"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"raise",
+			"error",
+			"raise",
+			"method",
+			"rm_favorite",
+			"4",
+			"brauzera",
+			"\"",
+			"postgres",
+			"blog4",
+			"blog2",
+			"run",
+			"apt",
+			"run",
+			"http://",
+			"app",
+			"<code>",
+			"<div>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 118.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"project": "productpedia.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"devise",
+				"config/initializers/devise.rb"
+			],
+			[
+				"no",
+				"config/recipes/nodejs.rb"
+			],
+			[
+				"p",
+				"config/recipes/templates/postgresql.yml.erb"
+			],
+			[
+				"d",
+				"config/database.yml"
+			],
+			[
+				"pr",
+				"config/deploy/production.rb"
+			],
+			[
+				"in",
+				"app/views/articles/index.html.erb"
+			],
+			[
+				"sa",
+				"lib/tasks/sample_data.rake"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
