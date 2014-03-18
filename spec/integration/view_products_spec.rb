@@ -14,6 +14,7 @@ end
 feature "View product" do
 	scenario "allows user to see product information" do
 		@product = FactoryGirl.create(:product)
+    @b_code =  FactoryGirl.create(:bar_code, product: @product)
     sign_in
 		visit products_path
 		click_link('View Product')
@@ -24,6 +25,7 @@ end
 feature "Edit product description" do
 	scenario "allows user to edit product description" do
 		@product = FactoryGirl.create(:product)
+    @b_code = FactoryGirl.create(:bar_code, product: @product)
     sign_in
 		visit product_path(@product)
 		fill_in 'product_description', with: 'new product_7 description'
@@ -36,6 +38,7 @@ end
 feature "Add favorite product" do
   scenario "allows user to add a product to favorite list" do
     @product = FactoryGirl.create(:product)
+    @b_code = FactoryGirl.create(:bar_code, product: @product)
     add_favorite
     expect(page).to have_css '.favorite', text: @product.name
   end
@@ -44,6 +47,7 @@ end
 feature "Remove favorite product" do
   scenario "allows user to remove product from favorite list" do
     @product = FactoryGirl.create(:product)
+    @b_code = FactoryGirl.create(:bar_code, product: @product)
     add_favorite
     click_link 'Remove product from favorites'
     expect(page).not_to have_css '.favorite', text:@product.name
@@ -53,6 +57,7 @@ end
 feature "Check favorites" do
   scenario " testing if a logged in user sees favorites of other user" do
     @product = FactoryGirl.create(:product)
+    @b_code = FactoryGirl.create(:bar_code, product: @product)
     @user_1 = FactoryGirl.create(:user)
     @user_2 = FactoryGirl.create(:user) 
     sign_in_as(@user_1)
@@ -70,6 +75,7 @@ feature "Check favorites" do
 
   scenario "checks if a favorite can be deleted from another user" do
     @product = FactoryGirl.create(:product)
+    @b_code = FactoryGirl.create(:bar_code, product: @product)
     @user_1 = FactoryGirl.create(:user)
     @user_2 = FactoryGirl.create(:user) 
     sign_in_as(@user_1)

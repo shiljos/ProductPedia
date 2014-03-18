@@ -287,6 +287,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1292,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -484,11 +500,15 @@
 	},
 	"file_history":
 	[
+		"/home/shbuntu/rails/railstest/ProductPedia/config/routes.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/user.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140311141917_devise_create_users.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/user_spec.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140317143644_add_devise_to_users.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/log/development.log",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/favorite_product_helpers.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/user_sign_out_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/routes.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/pages/homepage.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/application_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
@@ -607,11 +627,7 @@
 		"/home/shbuntu/rails/railstest/sample_app/app/views/layouts/application.html.erb",
 		"/home/shbuntu/rails/railstest/sample_app/app/assets/javascripts/application.js",
 		"/home/shbuntu/rails/railstest/sample_app/app/views/sessions/new.html.erb",
-		"/home/shbuntu/rails/railstest/sample_app/-e",
-		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140131080203_create_users.rb",
-		"/home/shbuntu/rails/railstest/sample_app/config/environments/test.rb",
-		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140131125642_add_password_digest_to_users.rb",
-		"/home/shbuntu/rails/railstest/sample_app/db/migrate/20140131124105_add_index_to_users_email.rb"
+		"/home/shbuntu/rails/railstest/sample_app/-e"
 	],
 	"find":
 	{
@@ -665,8 +681,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								161,
+								161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -725,6 +800,30 @@
 		"selected_items":
 		[
 			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"us",
+				"app/models/user.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			],
+			[
 				"devise",
 				"config/initializers/devise.rb"
 			],
@@ -751,10 +850,6 @@
 			[
 				"sa",
 				"lib/tasks/sample_data.rake"
-			],
-			[
-				"ro",
-				"config/routes.rb"
 			]
 		],
 		"width": 0.0
@@ -782,7 +877,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 280.0,
+	"side_bar_width": 334.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

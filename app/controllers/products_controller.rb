@@ -33,6 +33,9 @@ class ProductsController < ApplicationController
 
   def show
   	@product = Product.find(params[:id])
+    @b_code = @product.bar_codes.first.barcode
+    @nutrition_facts = @product.nutritions
+    @nutrit_amount = @product.product_nuts
   end
 
   def update
