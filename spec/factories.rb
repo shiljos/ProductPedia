@@ -23,4 +23,13 @@ FactoryGirl.define do
     	association :product
     	association :nutrition
     end
+
+    factory :ingredient do
+      name "Voda"
+    end
+
+    factory :product_ingredient do
+      association :product
+      association :ingredient
+    end
 end

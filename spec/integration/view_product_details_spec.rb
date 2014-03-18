@@ -28,3 +28,14 @@ feature "Warning" do
 		expect(page).to have_css '.warning', text: "No specific warnings are currently known for this product"
 	end
 end
+
+feature "Ingredients" do
+	scenario "checks for product ingredients" do
+		@product = FactoryGirl.create(:product)
+		@b_code = FactoryGirl.create(:bar_code, product: @product)
+		@ingredient = FactoryGirl.create(:ingredient)
+		@product_ing = FactoryGirl.create(:product_ingredient, product: @product, ingredient: @ingredient)
+		visit product_path(@product)
+		expect(page).to have_css '.ingredientname', text: @ingredient.name
+	end
+end

@@ -27,6 +27,14 @@
 	  <%= f.file_field :picture %>
 	<%end%>
 <%end%>
+<p>Ingredients(<%= @ingredients.count %>)</p>
+<ul>
+<% @ingredients.each do |ing| %>
+	<li class="ingredientname">
+		<%= ing.name %>
+	</li>
+<%end%>
+</ul><br/>
 
 <div><p class="description">Description: <%= @product.description %></p></div><br/> 
 <div><p class="barcode">Bar Code: <%= @b_code %></p></div>

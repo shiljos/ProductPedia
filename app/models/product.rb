@@ -4,6 +4,8 @@ class Product < ActiveRecord::Base
   has_many :bar_codes
   has_many :product_nuts
   has_many :nutritions, :through => :product_nuts
+  has_many :product_ingredients
+  has_many :ingredients, :through => :product_ingredients
 
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
