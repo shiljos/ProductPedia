@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   def favorite
   	@product = Product.find(params[:id])
   	@favorite = @product.favorites.build(user: current_user)
+    @fav_count = Favorite.count
   	@favorite.save
   	redirect_to @product
   end
@@ -18,7 +19,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-
   end
 
   def index
@@ -37,6 +37,8 @@ class ProductsController < ApplicationController
     @ingredients = @product.ingredients
     @nutrition_facts = @product.nutritions
     @nutrit_amount = @product.product_nuts
+    @manufact = @product.companies.first
+    @category = @product.categories.first.name
   end
 
   def update

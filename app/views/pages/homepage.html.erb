@@ -9,27 +9,53 @@
   <%= text_field_tag(:search) %>
   <%= submit_tag("Search") %>
 <% end %>  -->
-
-<%if user_signed_in?%>
-  <li class="login">
-    Logged in
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>     
-  </li>
-  <li>
-    <%= link_to('Products', products_path, method: :get) %>     
-  </li>
-<%else%>
-  <li>
-    Sign in
-    <%= link_to('Sign in', new_user_session_path, method: :get) %>
-  </li>
-  <li>
-    Sign up
-    <%= link_to('Sign up',new_user_registration_path, method: :get) %>
-  </li>
-  <li>
-      <%= link_to('Products', products_path, method: :get) %>
-  </li>
-<%end%>
 <h1>Welcome to ProductPedia</h1>
 
+<%if user_signed_in?%>
+  <ul>
+    <li class="login">
+      Logged in
+      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>     
+    </li>
+    <li>
+      <%= link_to('Products', products_path, method: :get) %>     
+    </li>
+  <%else%>
+    <li>
+      Sign in
+      <%= link_to('Sign in', new_user_session_path, method: :get) %>
+    </li>
+    <li>
+      Sign up
+      <%= link_to('Sign up',new_user_registration_path, method: :get) %>
+    </li>
+    <li>
+        <%= link_to('Products', products_path, method: :get) %>
+    </li>
+  </ul>
+<%end%>
+
+<%if user_signed_in?%>
+<h2>Favorite products</h2>
+  <ul>
+    <% list_favorite_products(current_user).each do |p| %>
+      <li>
+        <%= p.name %>
+      </li>
+    <%end%>
+  </ul>
+  </br></br>
+  
+    <% list_favorite_products(current_user).each do |p| %>
+      <div><%= p.name %></div>
+      <ul>
+        <% favorites_news_feed(current_user).each do |f| %>
+          <% if p.id == f.product_id %>     
+            <li>
+              <%= f.info %>
+            </li>
+          <%end%>
+        <%end%>
+      </ul>
+    <%end%>
+<%end%>

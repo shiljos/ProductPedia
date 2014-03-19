@@ -1,4 +1,7 @@
-<%= image_tag @product.picture.url(:medium) %>
+<%= image_tag @product.picture.url(:medium) %></br>
+
+<p> Found in:<%= @category %></p>
+<p>	Made by: <%= @manufact.name %></p>
 
 <% if user_signed_in? %>
 	<%= form_for @product do |f| %>

@@ -1,12 +1,24 @@
 FactoryGirl.define do
 	factory :user do
       sequence(:email) { |n| "shiljos#{n}@example.com" }
-      sequence(:password) { |n| "user#{n}user" }
+      password "12345678" 
+      password_confirmation "12345678"
     end  
 
     factory :product do
       sequence(:name) { |n| "Product #{n}" }
-      sequence(:description) { |n| "product_#{n} description"}
+      description "Description"
+      warning ""
+    end
+
+    factory :favorite do
+      association :product
+      association :user
+    end
+
+    factory :category do
+      sequence(:name) { |n| "Category #{n}"}
+      product
     end
 
     factory :bar_code do
@@ -31,5 +43,26 @@ FactoryGirl.define do
     factory :product_ingredient do
       association :product
       association :ingredient
+    end
+
+    factory :company do
+      sequence(:name) { |n| "Company #{n}" }
+      country "USA"
+      city "NY"
+    end
+
+    factory :distributer do
+      association :product
+      association :company
+    end
+
+    factory :new_info do
+      info "blablablainfoinfo"
+      product
+    end
+
+    factory :feed do
+      new_info
+      user
     end
 end
