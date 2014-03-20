@@ -1,4 +1,6 @@
 ProductPedia::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
   root to: 'high_voltage/pages#show', id: 'homepage'
   resources :products, only: [:index, :show, :update, :delete] do

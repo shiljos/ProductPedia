@@ -1,68 +1,94 @@
-<%= image_tag @product.picture.url(:medium) %></br>
+<div class="container">
+	<div class="row">
+	  <div class="col-md-4">
+	 		<div class="thumbnail">
+	      <%= image_tag @product.picture.url(:medium) %></br>
+			  <div class="panel panel-default">
+			  	<div class="panel-heading">Product name: <%= @product.name %></div>
+			  		<div class="panel-body">
+			      	<p> Found in:<%= @category %></p>
+							<p>	Made by: <%= @manufact.name %></p>
+							<p>	Barcode: <%= @b_code %></p>
+							<div>
+								Product description:
+								<%= text_area_tag :Description, @product.description%>
+							</div>
+							<div style= "padding:10px">
+						  	<div style="font-size: 25px" align="left" >
+							  	<% if product_is_favorite(current_user, @product) %>
+							  		<span class="glyphicon glyphicon-thumbs-up"></span>
+							  	<%end%>	
+						  	</div>
+					  	</div>
+						</div>	
+				</div>    
+			</div>
+		</div>
+	
+		<div class="col-md-4">
+	
+					<div class="row">
+						<div class="panel panel-default">
+							<div class="panel-heading">Ingredients(<%= @ingredients.count %>)</div>
+							<ul>
+								<% @ingredients.each do |ing| %>
+									<li class="ingredientname">
+									<%= ing.name %>
+									</li>
+								<%end%>
+						  </ul><br/>
+						</div>    
+					</div>
+			 		
+			 		<div class="row">
+						<div class="panel panel-default">
+					  	<div class="panel-heading">Nutrition facts</div>
+							<table>
+								<% @nutrition_facts.each do |nut| %>
+									<% @nutrit_amount.each do |nut_amount| %>
+										<tr>
+											<% if nut.id == nut_amount.nutrition_id %>
+												<td>
+													<%= nut.name %>
+												</td>
+												<td class="nutritfield">
+													<%= nut_amount.amount%>
+												</td>
+										  <%end%>
+										</tr>
+									<%end%>
+							  <%end%>
+							</table>
+						</div>
+					</div>
+		</div>
+		
+		<div class="col-md-4">
+					<div class="row">
+						<div class="panel panel-default">
+						 	<% if user_signed_in? %>
+						  	<div class="panel-heading">Favorites</div>
+						  	<ul class="nav nav-pills">
+								  <li>
+								  	<%= link_to('Add',favorite_product_path(@product),method: :post )%>
+								  </li>
+						  	  <% if product_is_favorite(current_user, @product) %>
+										<li >
+								    	<%= link_to('Remove ', remove_favorite_product_path(@product), method: :delete)%>
+								    </li>
+									<%end%>
+						  	</ul>
+								<ul class="list-group">
+							    <% list_favorite_products(current_user).each do |p| %>
+							      <li class="list-group-item">
+							        <%= p.name %>
+							      </li>
+							    <%end%>
+							  </ul>
+						  <%end%>
+						</div>
+					</div>
+		</div>
 
-<p> Found in:<%= @category %></p>
-<p>	Made by: <%= @manufact.name %></p>
-
-<% if user_signed_in? %>
-	<%= form_for @product do |f| %>
-	  <%= f.label :name %><br/>
-	  <%= f.text_field :name %><br/>
-	  <%= f.label :description %><br/>
-	  <%= f.text_field :description %><br/>
-	  <%= f.file_field :picture %><br/>
-	  <%= f.submit "Submit change", method: :patch %>
-	<% end %>
-
-	<%= form_tag(favorite_product_path(@product), method: :post) do %>
-	  <%= submit_tag("Add to favorites") %>
-	<% end %> 
-
-  <% if product_is_favorite(current_user, @product) %>
-    <p class="favorite"> <%= @product.name %> </p>
-    <%= link_to('Remove product from favorites', remove_favorite_product_path(@product), method: :delete)%>
-  <%end%>
-<%else%>
-	<%= form_for @product do |f| %>
-	  <%= f.label :name %><br/>
-	  <%= f.text_field :name %><br/>
-	  <%= f.label :description %><br/>
-	  <%= f.text_field :description %><br/>
-	  <%= f.file_field :picture %>
-	<%end%>
-<%end%>
-<p>Ingredients(<%= @ingredients.count %>)</p>
-<ul>
-<% @ingredients.each do |ing| %>
-	<li class="ingredientname">
-		<%= ing.name %>
-	</li>
-<%end%>
-</ul><br/>
-
-<div><p class="description">Description: <%= @product.description %></p></div><br/> 
-<div><p class="barcode">Bar Code: <%= @b_code %></p></div>
-<br/>
-
-<% if @product.warning.blank? %>
-  <p class="warning">Warning: No specific warnings are currently known for this product </p>
-<%else%>
-  <div><p class="warning">Warning: <%= @product.warning %></p></div>
-<%end%>
-
-<table>
-  <p>Nutrition facts</p>
-	<% @nutrition_facts.each do |nut| %>
-		<% @nutrit_amount.each do |nut_amount| %>
-			<tr>
-				<% if nut.id == nut_amount.nutrition_id %>
-					<td>
-						<%= nut.name %>
-					</td>
-					<td class="nutritfield">
-						<%= nut_amount.amount%>
-					</td>
-				<%end%>
-			</tr>
-		<%end%>
-  <%end%>
-</table>
+	</div>
+</div>

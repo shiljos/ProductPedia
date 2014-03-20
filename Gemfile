@@ -8,6 +8,8 @@ gem 'pg'
 gem 'high_voltage'
 gem 'devise'
 gem "paperclip", "~> 4.1"
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'bootstrap-sass', '~> 3.1.1'
 
 group :test, :development do
   gem 'rspec-rails'

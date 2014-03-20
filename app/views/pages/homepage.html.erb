@@ -10,7 +10,7 @@
   <%= submit_tag("Search") %>
 <% end %>  -->
 <h1>Welcome to ProductPedia</h1>
-
+<!-- 
 <%if user_signed_in?%>
   <ul>
     <li class="login">
@@ -33,13 +33,13 @@
         <%= link_to('Products', products_path, method: :get) %>
     </li>
   </ul>
-<%end%>
+<%end%> -->
 
 <%if user_signed_in?%>
 <h2>Favorite products</h2>
-  <ul>
+  <ul class="list-group">
     <% list_favorite_products(current_user).each do |p| %>
-      <li>
+      <li class="list-group-item">
         <%= p.name %>
       </li>
     <%end%>
@@ -47,8 +47,8 @@
   </br></br>
   
     <% list_favorite_products(current_user).each do |p| %>
-      <div><%= p.name %></div>
-      <ul>
+      <div class="favname"><%= p.name %></div>
+      <ul class="feed">
         <% favorites_news_feed(current_user).each do |f| %>
           <% if p.id == f.product_id %>     
             <li>
