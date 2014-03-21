@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"cu",
+				"current_user"
+			],
+			[
+				"produ",
+				"product_is_favorite"
+			],
+			[
 				"new",
 				"new_infos_1"
 			],
@@ -304,10 +312,6 @@
 				"multy"
 			],
 			[
-				"cu",
-				"curr_file"
-			],
-			[
 				"print",
 				"print_line"
 			],
@@ -355,23 +359,47 @@
 			"file": "app/views/products/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 1857,
+				"buffer_size": 2645,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/products_controller.rb",
+			"file": "app/models/product.rb",
 			"settings":
 			{
-				"buffer_size": 1430,
+				"buffer_size": 756,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "lib/tasks/sample_data.rake",
+			"file": "app/views/products/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1401,
+				"buffer_size": 534,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 503,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/_header.html.erb",
+			"settings":
+			{
+				"buffer_size": 1734,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/custom.scss",
+			"settings":
+			{
+				"buffer_size": 1218,
 				"line_ending": "Unix"
 			}
 		},
@@ -379,15 +407,15 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1343,
+				"buffer_size": 1376,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/factories.rb",
+			"file": "app/views/pages/homepage.html.erb",
 			"settings":
 			{
-				"buffer_size": 1218,
+				"buffer_size": 1521,
 				"line_ending": "Unix"
 			}
 		}
@@ -395,9 +423,33 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 306.0,
 		"selected_items":
 		[
+			[
+				"set s css",
+				"Set Syntax: CSS"
+			],
+			[
+				"bs3 footer",
+				"Snippet: bs3-panel-footer"
+			],
+			[
+				"bs3 navbar",
+				"Snippet: bs3-navbar-responsive"
+			],
+			[
+				"bs3 nav",
+				"Snippet: bs3-navbar-inverse"
+			],
+			[
+				"bs3-he",
+				"Snippet: bs3-page header"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
 			[
 				"previe",
 				"Markdown Preview: Python Markdown: Preview in Browser"
@@ -477,10 +529,6 @@
 			[
 				"mark",
 				"Set Syntax: Markdown"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"instal",
@@ -588,6 +636,29 @@
 	},
 	"file_history":
 	[
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/tasks/sample_data.rake",
+		"/home/shbuntu/rails/railstest/ProductPedia/db/seeds.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config.ru",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/category_spec.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/session_store.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140311141917_devise_create_users.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/productpedia.sublime-project",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/factories.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/active_admin.css.scss",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/_footer.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/Gemfile",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/products_controller.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/routes.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/custom.scss",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/application.css",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/ingredient.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/ingredient_spec.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/devise/mailer/confirmation_instructions.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/active_admin.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/filter_parameter_logging.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/bin/bundle",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/boot.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/pages/homepage.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/index.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/helpers/application_helper.rb",
@@ -598,7 +669,6 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319112354_create_feeds.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318075245_create_bar_codes.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319111648_create_new_infos.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/routes.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319081715_create_categories.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/schema.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319091458_add_product_ref_to_category.rb",
@@ -609,27 +679,22 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/view_products_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/category.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/view_product_details_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/factories.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/ingredient.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_ingredient.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318135401_create_product_ingredients.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318092650_create_product_nuts.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318090339_create_nutritions.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/Gemfile",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/application_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_nut.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/bar_code.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/favorite.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318091047_create_join_table.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318091446_add_amount_to_nutritions_products.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140311141917_devise_create_users.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/user_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140317143644_add_devise_to_users.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/log/development.log",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/favorite_product_helpers.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/user_sign_out_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/application.js",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/spec_helper.rb",
 		"/home/shbuntu/rails/danieltest",
@@ -698,28 +763,11 @@
 		"/home/shbuntu/rails/railstest/sample_app/lib/tasks/sample_data.rake",
 		"/home/shbuntu/rails/railstest/sample_app/app/controllers/application_controller.rb",
 		"/home/shbuntu/rails/railstest/sample_app/spec/controllers/relationships_controller_spec.rb",
-		"/home/shbuntu/Desktop/rby/code/chap01/ex1_cars_demo.rb",
-		"/home/shbuntu/rails/railstest/sample_app/db/schema.rb",
-		"/home/shbuntu/rails/railstest/new_app/config/initializers/filter_parameter_logging.rb",
-		"/home/shbuntu/rails/railstest/new_app/tmp/cache/assets/development/sprockets/f5a70289c0a0c346d3cc57416cb36697",
-		"/home/shbuntu/rails/railstest/sample_app/app/controllers/relationships_controller.rb",
-		"/home/shbuntu/rails/railstest/sample_app/app/controllers/static_pages_controller.rb",
-		"/home/shbuntu/rails/railstest/sample_app/app/models/user.rb",
-		"/home/shbuntu/rails/railstest/sample_app/app/models/relationship.rb",
-		"/home/shbuntu/rails/railstest/sample_app/spec/models/user_spec.rb",
-		"/home/shbuntu/rails/railstest/sample_app/spec/models/relationship_spec.rb",
-		"/home/shbuntu/rails/railstest/sample_app/app/controllers/microposts_controller.rb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/relationships/create.js.erb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/relationships/destroy.js.erb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_unfollow.html.erb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/users/_follow.html.erb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/users/show_follow.html.erb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/shared/_stats.html.erb",
-		"/home/shbuntu/rails/railstest/sample_app/app/views/static_pages/home.html.erb"
+		"/home/shbuntu/Desktop/rby/code/chap01/ex1_cars_demo.rb"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -734,6 +782,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"float",
+			"-xs",
 			"raise",
 			"error",
 			"raise",
@@ -769,7 +819,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -778,15 +828,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1857,
+						"buffer_size": 2645,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1531,
-								1531
+								2629,
+								2629
 							]
 						],
 						"settings":
@@ -795,7 +845,7 @@
 							"tab_size": 2
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -803,19 +853,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/products_controller.rb",
+					"file": "app/models/product.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1430,
+						"buffer_size": 756,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								594,
-								594
+								530,
+								530
 							]
 						],
 						"settings":
@@ -824,49 +874,138 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "lib/tasks/sample_data.rake",
+					"file": "app/views/products/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1401,
+						"buffer_size": 534,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								811,
-								811
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layouts/_header.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								490,
+								490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/stylesheets/custom.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1717.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "Gemfile",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1343,
+						"buffer_size": 1376,
 						"regions":
 						{
 						},
@@ -889,25 +1028,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "spec/factories.rb",
+					"buffer": 7,
+					"file": "app/views/pages/homepage.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1218,
+						"buffer_size": 1521,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								291,
-								291
+								940,
+								940
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -915,7 +1054,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -975,6 +1114,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"prod",
+				"app/models/product.rb"
+			],
 			[
 				"route",
 				"config/routes.rb"
@@ -1053,7 +1196,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 317.0,
+	"side_bar_width": 244.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

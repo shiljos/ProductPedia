@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-	  <div class="col-md-4">
+	  <div class="col-md-3 col-md-offset-0">
 	 		<div class="thumbnail">
 	      <%= image_tag @product.picture.url(:medium) %></br>
 			  <div class="panel panel-default">
@@ -13,13 +13,6 @@
 								Product description:
 								<%= text_area_tag :Description, @product.description%>
 							</div>
-							<div style= "padding:10px">
-						  	<div style="font-size: 25px" align="left" >
-							  	<% if product_is_favorite(current_user, @product) %>
-							  		<span class="glyphicon glyphicon-thumbs-up"></span>
-							  	<%end%>	
-						  	</div>
-					  	</div>
 						</div>	
 				</div>    
 			</div>
@@ -62,9 +55,9 @@
 						</div>
 					</div>
 		</div>
-		
-		<div class="col-md-4">
-					<div class="row">
+
+		<div class="col-md-5 col-md-offset-0" >
+					<div class="rown">
 						<div class="panel panel-default">
 						 	<% if user_signed_in? %>
 						  	<div class="panel-heading">Favorites</div>
@@ -75,6 +68,9 @@
 						  	  <% if product_is_favorite(current_user, @product) %>
 										<li >
 								    	<%= link_to('Remove ', remove_favorite_product_path(@product), method: :delete)%>
+								    </li>
+								    <li style = "font-size: 20px">
+								    	<span class="glyphicon glyphicon-thumbs-up" style= "padding:10px "></span>
 								    </li>
 									<%end%>
 						  	</ul>
