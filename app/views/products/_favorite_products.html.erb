@@ -6,7 +6,7 @@
 		  	<%= link_to('Add',favorite_product_path(@product),method: :post )%>
 		  </li>
   	  <% if product_is_favorite(current_user, @product) %>
-				<li >
+				<li class="addfav">
 		    	<%= link_to('Remove ', remove_favorite_product_path(@product), method: :delete)%>
 		    </li>
 		    <li style = "font-size: 20px">

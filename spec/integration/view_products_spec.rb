@@ -5,33 +5,24 @@ feature "Products list" do
   	@products = FactoryGirl.create_list(:product, 5)
     visit products_path
     @products.each do |prod|
-    	expect(page).to have_selector('li', text: prod.name)
-    	expect(page).to have_link("View Product", href: product_path(prod)) 
+    	expect(page).to have_css('.list-group', text: prod.name)
+    	#expect(page).to have_link("View Product", href: product_path(prod)) 
     end
   end
 end
 
 feature "View product" do
 	scenario "allows user to see product information" do
-		@product = FactoryGirl.create(:product)
-    @b_code =  FactoryGirl.create(:bar_code, product: @product)
+	  @product = FactoryGirl.create(:product)
+    @b_code = FactoryGirl.create(:bar_code, product: @product)
+    @company = FactoryGirl.create(:company)
+    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
+    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
+    @category = FactoryGirl.create(:category, product: @product)
     sign_in
 		visit products_path
-		click_link('View Product')
-		expect(page).to have_css '.description', text: @product.description
-	end
-end
-
-feature "Edit product description" do
-	scenario "allows user to edit product description" do
-		@product = FactoryGirl.create(:product)
-    @b_code = FactoryGirl.create(:bar_code, product: @product)
-    sign_in
-		visit product_path(@product)
-		fill_in 'product_description', with: 'new product_7 description'
-		click_button 'Submit change'
-
-		expect(page).to have_css '.description', text: 'new product_7 description'
+		click_link(@product.name)
+		expect(page).to have_css '.panel-heading', text: @product.name
 	end
 end
 
@@ -39,8 +30,13 @@ feature "Add favorite product" do
   scenario "allows user to add a product to favorite list" do
     @product = FactoryGirl.create(:product)
     @b_code = FactoryGirl.create(:bar_code, product: @product)
+    @company = FactoryGirl.create(:company)
+    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
+    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
+    @category = FactoryGirl.create(:category, product: @product)
     add_favorite
-    expect(page).to have_css '.favorite', text: @product.name
+    #expect(page).to have_css '.addfav'
+    expect(page).to have_link("Remove", href: remove_favorite_product_path(@product)) 
   end
 end
 
@@ -48,42 +44,54 @@ feature "Remove favorite product" do
   scenario "allows user to remove product from favorite list" do
     @product = FactoryGirl.create(:product)
     @b_code = FactoryGirl.create(:bar_code, product: @product)
+    @company = FactoryGirl.create(:company)
+    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
+    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
+    @category = FactoryGirl.create(:category, product: @product)
     add_favorite
-    click_link 'Remove product from favorites'
-    expect(page).not_to have_css '.favorite', text:@product.name
+    click_link 'Remove'
+    #expect(page).not_to have_css '.favorite', text:@product.name
+    expect(page).not_to have_link("Remove", href: remove_favorite_product_path(@product))
   end
 end
 
 feature "Check favorites" do
-  scenario " testing if a logged in user sees favorites of other user" do
+  scenario "is testing if a logged in user sees favorites of other user" do
     @product = FactoryGirl.create(:product)
     @b_code = FactoryGirl.create(:bar_code, product: @product)
+    @company = FactoryGirl.create(:company)
+    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
+    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
+    @category = FactoryGirl.create(:category, product: @product)
     @user_1 = FactoryGirl.create(:user)
     @user_2 = FactoryGirl.create(:user) 
     sign_in_as(@user_1)
     click_link 'Products'
-    click_link 'View Product'
+    click_link @product.name
     add_favorite_as(@user_1, @product)
-    visit root_path
-    click_link 'Logout'
+    click_link 'Sign out'
     click_link 'Sign in'
     sign_in_as(@user_2)
     click_link 'Products'
-    click_link 'View Product'
-    expect(page).not_to have_css '.favorite', text: @product.name
+    click_link @product.name
+    expect(page).not_to have_link("Remove", href: remove_favorite_product_path(@product))
+    #expect(page).not_to have_css '.favorite', text: @product.name
   end
 
   scenario "checks if a favorite can be deleted from another user" do
     @product = FactoryGirl.create(:product)
     @b_code = FactoryGirl.create(:bar_code, product: @product)
+    @company = FactoryGirl.create(:company)
+    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
+    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
+    @category = FactoryGirl.create(:category, product: @product)
     @user_1 = FactoryGirl.create(:user)
     @user_2 = FactoryGirl.create(:user) 
     sign_in_as(@user_1)
     click_link 'Products'
-    click_link 'View Product'
+    click_link @product.name
     add_favorite_as(@user_1, @product)
-    visit root_path
-    click_link 'Logout'
+    click_link 'Sign out'
     click_link 'Sign in'
     sign_in_as(@user_2)
     expect{page.driver.submit :delete, remove_favorite_product_path(@product), {}}.not_to change {Favorite.count}
@@ -96,7 +104,7 @@ feature "Search products" do
     visit products_path
     fill_in 'search', with: @products.first.name
     click_button 'Search'
-    expect(page).to have_css '.result', text: @products.first.name
-    expect(page).to have_css '.result', count: 1
+    expect(page).to have_css '.list-group', text: @products.first.name
+    expect(page).to have_css '.list-group', count: 1
   end
 end

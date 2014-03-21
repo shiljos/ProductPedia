@@ -19,6 +19,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'shoulda-matchers'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
