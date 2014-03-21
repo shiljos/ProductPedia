@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="panel panel-default">
+  	<div class="panel-heading">Nutrition facts</div>
+		<table>
+			<% @nutrition_facts.each do |nut| %>
+				<% @nutrit_amount.each do |nut_amount| %>
+					<tr>
+						<% if nut.id == nut_amount.nutrition_id %>
+							<td>
+								<%= nut.name %>
+							</td>
+							<td class="nutritfield">
+								<%= nut_amount.amount%>
+							</td>
+					  <%end%>
+					</tr>
+				<%end%>
+		  <%end%>
+		</table>
+	</div>
+</div>

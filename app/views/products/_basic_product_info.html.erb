@@ -1,0 +1,15 @@
+<div class="thumbnail">
+  <%= image_tag @product.picture.url(:medium) %></br>
+  <div class="panel panel-default">
+  	<div class="panel-heading">Product name: <%= @product.name %></div>
+  		<div class="panel-body">
+      	<p> Found in:<%= @category %></p>
+				<p>	Distributer: <%= @manufact.name %></p>
+				<p>	Barcode: <%= @b_code %></p>
+				<div>
+					Product description:
+					<%= text_area_tag :Description, @product.description%>
+				</div>
+			</div>	
+	</div>    
+</div>

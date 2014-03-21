@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+ 	<% if user_signed_in? %>
+  	<div class="panel-heading">Favorites</div>
+  	<ul class="nav nav-pills">
+		  <li>
+		  	<%= link_to('Add',favorite_product_path(@product),method: :post )%>
+		  </li>
+  	  <% if product_is_favorite(current_user, @product) %>
+				<li >
+		    	<%= link_to('Remove ', remove_favorite_product_path(@product), method: :delete)%>
+		    </li>
+		    <li style = "font-size: 20px">
+		    	<span class="glyphicon glyphicon-thumbs-up" style= "padding:10px "></span>
+		    </li>
+			<%end%>
+  	</ul>
+		<ul class="list-group">
+	    <% list_favorite_products(current_user).each do |p| %>
+	      <li class="list-group-item">
+	        <%= p.name %>
+	      </li>
+	    <%end%>
+	  </ul>
+  <%end%>
+</div>

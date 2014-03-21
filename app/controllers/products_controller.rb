@@ -22,13 +22,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-  	#@products = Product.all
     @products = Product.search(params[:search])
-    # if params[:search]
-    #   @products = Product.all(conditions: ['name LIKE ?', "%#{params[:search]}%"])
-    # else
-    #   @products = Product.all
-    # end
   end
 
   def show
