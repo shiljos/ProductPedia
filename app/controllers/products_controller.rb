@@ -31,7 +31,13 @@ class ProductsController < ApplicationController
     @ingredients = @product.ingredients
     @nutrition_facts = @product.nutritions
     @nutrit_amount = @product.product_nuts
-    @manufact = @product.companies.first
+
+    @dist = @product.distributers.first
+    @distributer = Company.find(@dist.company_id)
+
+    @manufact = @product.manufacturers.first
+    @manufacturer = Company.find(@manufact.company_id)
+
     @category = @product.categories.first.name
   end
 

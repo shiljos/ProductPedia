@@ -10,6 +10,8 @@ class Product < ActiveRecord::Base
   has_many :distributers
   has_many :companies, :through => :distributers
   has_many :new_infos
+  has_many :manufacturers
+  has_many :companies, :through => :manufacturers
 
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/cola.jpeg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
