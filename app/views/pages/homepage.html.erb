@@ -35,27 +35,25 @@
   </ul>
 <%end%> -->
 
-<%if user_signed_in?%>
-<h2>Favorite products</h2>
-  <ul class="list-group">
-    <% list_favorite_products(current_user).each do |p| %>
-      <li class="list-group-item">
-        <%= p.name %>
-      </li>
-    <%end%>
-  </ul>
-  </br></br>
-  
-    <% list_favorite_products(current_user).each do |p| %>
-      <div class="favname"><%= p.name %></div>
-      <ul class="feed">
+<%if user_signed_in?%> 
+  <% list_favorite_products(current_user).each do |p| %>
+    <div class="favname">
+      <ul>
+        <li>
+          <%= p.name %>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ol class="feed">
         <% favorites_news_feed(current_user).each do |f| %>
           <% if p.id == f.product_id %>     
             <li>
-              <%= f.info %>
+              <span class="content"><%= f.info %></span>
             </li>
           <%end%>
         <%end%>
-      </ul>
-    <%end%>
+      </ol>
+    </div>
+  <%end%>
 <%end%>

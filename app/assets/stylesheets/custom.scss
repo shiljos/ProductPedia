@@ -29,41 +29,6 @@ p {
   line-height: 1.7em;
 }
 
-
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  padding-right: 10px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 /* feed */
 
 .feed {
@@ -75,6 +40,10 @@ footer ul li {
     border-top: 1px solid #e8e8e8;
     color: #B0C4DE;
   }
+}
+
+.content {
+  display: block;
 }
 
 
