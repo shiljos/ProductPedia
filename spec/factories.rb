@@ -9,7 +9,9 @@ FactoryGirl.define do
       sequence(:name) { |n| "Product #{n}" }
       description "Description"
       warning ""
+      category
     end
+
 
     factory :favorite do
       association :product
@@ -18,7 +20,6 @@ FactoryGirl.define do
 
     factory :category do
       sequence(:name) { |n| "Category #{n}"}
-      product
     end
 
     factory :bar_code do

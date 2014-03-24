@@ -2,7 +2,6 @@ module FavoriteProductHelpers
   def add_favorite
     sign_in
     visit product_path(@product)
-    #click_button 'Add to favorites'
     click_link 'Add'
   end
   def add_favorite_as(user, product)

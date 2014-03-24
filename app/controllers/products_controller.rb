@@ -38,7 +38,11 @@ class ProductsController < ApplicationController
     @manufact = @product.manufacturers.first
     @manufacturer = Company.find(@manufact.company_id)
 
-    @category = @product.categories.first.name
+    #@category = @product.categories.first.name
+    c = Category.all
+    c.each do |category|
+      @category = category if category.id == @product.category_id
+    end
   end
 
   def update

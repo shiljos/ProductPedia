@@ -6,14 +6,13 @@ class Product < ActiveRecord::Base
   has_many :nutritions, :through => :product_nuts
   has_many :product_ingredients
   has_many :ingredients, :through => :product_ingredients
-  has_many :categories
   has_many :distributers
-  has_many :companies, :through => :distributers
+  has_many :distribution_companies, :through => :distributers, :source => :company
   has_many :new_infos
   has_many :manufacturers
-  has_many :companies, :through => :manufacturers
+  has_many :manufacture_companies, :through => :manufacturers, :source => :company
+  belongs_to :category
 
-  validates_presence_of :name
   
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:styles/PixarBall.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/

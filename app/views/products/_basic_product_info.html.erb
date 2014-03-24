@@ -3,13 +3,13 @@
   <div class="panel panel-default">
   	<div class="panel-heading">Product name: <%= @product.name %></div>
   		<div class="panel-body">
-      	<p> Found in:<%= @category %></p>
+      	<p> Found in:<%= @category.name %></p>
 				<p>	Distributer: <%= @distributer.name %></p>
 				<p> Manufacturer: <%= @manufacturer.name %></p>
 				<p>	Barcode: <%= @b_code %></p>
 				<div>
 					Product description:
-					<%= text_area_tag :Description, @product.description%>
+					<%= text_field_tag :Description, @product.description%>
 				</div>
 			</div>	
 	</div>    

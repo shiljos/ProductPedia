@@ -50,21 +50,20 @@ ActiveRecord::Schema.define(version: 20140321102249) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "bar_codes", force: true do |t|
-    t.string   "barcode"
+    t.string   "barcode",    null: false
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "categories", force: true do |t|
-    t.string   "name"
-    t.integer  "product_id"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "companies", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.string   "country"
     t.string   "city"
     t.datetime "created_at"
@@ -93,7 +92,7 @@ ActiveRecord::Schema.define(version: 20140321102249) do
   end
 
   create_table "ingredients", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -113,7 +112,7 @@ ActiveRecord::Schema.define(version: 20140321102249) do
   end
 
   create_table "nutritions", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -134,8 +133,9 @@ ActiveRecord::Schema.define(version: 20140321102249) do
   end
 
   create_table "products", force: true do |t|
-    t.string   "name"
-    t.string   "description"
+    t.string   "name",                 null: false
+    t.string   "description",          null: false
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture_file_name"

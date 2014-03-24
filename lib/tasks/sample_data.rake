@@ -4,11 +4,13 @@ namespace :db do
 	desc "Fill database with sample data"
 	task populate: :environment do 
 		@users = FactoryGirl.create_list(:user, 3)
-		@products = FactoryGirl.create_list(:product, 10)
+		@category = FactoryGirl.create_list(:category, 3)
+		@products = FactoryGirl.create_list(:product, 10, category: @category.first)
 		@ingredients = FactoryGirl.create_list(:ingredient, 7)
 		@nutritions = FactoryGirl.create_list(:nutrition, 7)
 		@companies = FactoryGirl.create_list(:company, 10)
-		@product_n = FactoryGirl.create(:product)
+		@category_n = FactoryGirl.create(:category)	
+		@product_n = FactoryGirl.create(:product, category: @category_n)
 		@company_n = FactoryGirl.create(:company)
 
 		@users.each do |user|
@@ -18,7 +20,7 @@ namespace :db do
 		end	
 
 		@products.each do |product|
-			FactoryGirl.create(:category, product: product)
+			#FactoryGirl.create(:category, product: product)
 			FactoryGirl.create(:bar_code, product: product)
 			#FactoryGirl.create(:new_info, product: product)
 		end
@@ -50,7 +52,7 @@ namespace :db do
 
 
 
-		FactoryGirl.create(:category, product: @product_n)	
+		
 		FactoryGirl.create(:bar_code, product: @product_n)
 		FactoryGirl.create(:manufacturer, product: @product_n, company: @company_n)
 		FactoryGirl.create(:distributer, product: @product_n, company: @companies.first)
@@ -79,5 +81,40 @@ namespace :db do
 		@nutritions.each do |nutrition|
 				FactoryGirl.create(:product_nut, product: @product_n, nutrition: nutrition)
 		end
+	end
+
+	desc "Add nutella to prodcts"
+	task nutella: :environment do
+		@category = FactoryGirl.create(:category, name: "Condiments/Dressings")
+		@nutella = FactoryGirl.create(:product, name: "Nutella", description: "Hazelnut Spread", category: @category)
+		FactoryGirl.create(:bar_code, product: @nutella)
+		@ferrero = FactoryGirl.create(:company, name: "Ferrero")
+
+		@ingredient_1 = FactoryGirl.create(:ingredient, name: "Sugar")
+		@ingredient_2 = FactoryGirl.create(:ingredient, name: "Hazelnut")
+		@ingredient_3 = FactoryGirl.create(:ingredient, name: "Palm Oil")
+		@ingredient_4 = FactoryGirl.create(:ingredient, name: "Cocoa")
+		@ingredient_5 = FactoryGirl.create(:ingredient, name: "Milk")
+
+		FactoryGirl.create(:product_ingredient, product: @nutella, ingredient: @ingredient_1)
+		FactoryGirl.create(:product_ingredient, product: @nutella, ingredient: @ingredient_2)
+		FactoryGirl.create(:product_ingredient, product: @nutella, ingredient: @ingredient_3)
+		FactoryGirl.create(:product_ingredient, product: @nutella, ingredient: @ingredient_4)
+	 	FactoryGirl.create(:product_ingredient, product: @nutella, ingredient: @ingredient_5)
+
+		@nutrition_1 = FactoryGirl.create(:nutrition, name: "Cholesterol")
+		@nutrition_2 = FactoryGirl.create(:nutrition, name: "Sodium")
+		@nutrition_3 = FactoryGirl.create(:nutrition, name: "Protein")
+		@nutrition_4 = FactoryGirl.create(:nutrition, name: "Calcium")
+		@nutrition_5 = FactoryGirl.create(:nutrition, name: "Iron")
+
+		FactoryGirl.create(:product_nut, product: @nutella, nutrition: @nutrition_1)
+		FactoryGirl.create(:product_nut, product: @nutella, nutrition: @nutrition_2)
+		FactoryGirl.create(:product_nut, product: @nutella, nutrition: @nutrition_3)
+		FactoryGirl.create(:product_nut, product: @nutella, nutrition: @nutrition_4)
+		FactoryGirl.create(:product_nut, product: @nutella, nutrition: @nutrition_5)
+
+		FactoryGirl.create(:manufacturer, product: @nutella, company: @ferrero)
+		FactoryGirl.create(:distributer, product: @nutella, company: @ferrero)
 	end
 end

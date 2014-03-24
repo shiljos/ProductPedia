@@ -2,7 +2,8 @@ require 'spec_helper'
 
 feature "Products list" do
   scenario "allows user to see all products" do
-  	@products = FactoryGirl.create_list(:product, 5)
+    @category = FactoryGirl.create(:category)
+  	@products = FactoryGirl.create_list(:product, 5, category: @category)
     visit products_path
     @products.each do |prod|
     	expect(page).to have_css('.list-group', text: prod.name)
@@ -13,12 +14,9 @@ end
 
 feature "View product" do
 	scenario "allows user to see product information" do
-	  @product = FactoryGirl.create(:product)
-    @b_code = FactoryGirl.create(:bar_code, product: @product)
-    @company = FactoryGirl.create(:company)
-    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
-    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
-    @category = FactoryGirl.create(:category, product: @product)
+    @category = FactoryGirl.create(:category)
+	  @product = FactoryGirl.create(:product, category: @category)
+    product_details_init(@product)
     sign_in
 		visit products_path
 		click_link(@product.name)
@@ -28,12 +26,9 @@ end
 
 feature "Add favorite product" do
   scenario "allows user to add a product to favorite list" do
-    @product = FactoryGirl.create(:product)
-    @b_code = FactoryGirl.create(:bar_code, product: @product)
-    @company = FactoryGirl.create(:company)
-    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
-    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
-    @category = FactoryGirl.create(:category, product: @product)
+    @category = FactoryGirl.create(:category)
+    @product = FactoryGirl.create(:product, category: @category)
+    product_details_init(@product)
     add_favorite
     #expect(page).to have_css '.addfav'
     expect(page).to have_link("Remove", href: remove_favorite_product_path(@product)) 
@@ -42,12 +37,9 @@ end
 
 feature "Remove favorite product" do
   scenario "allows user to remove product from favorite list" do
-    @product = FactoryGirl.create(:product)
-    @b_code = FactoryGirl.create(:bar_code, product: @product)
-    @company = FactoryGirl.create(:company)
-    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
-    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
-    @category = FactoryGirl.create(:category, product: @product)
+    @category = FactoryGirl.create(:category)
+    @product = FactoryGirl.create(:product, category: @category)
+    product_details_init(@product)
     add_favorite
     click_link 'Remove'
     #expect(page).not_to have_css '.favorite', text:@product.name
@@ -57,12 +49,9 @@ end
 
 feature "Check favorites" do
   scenario "is testing if a logged in user sees favorites of other user" do
+    @category = FactoryGirl.create(:category)
     @product = FactoryGirl.create(:product)
-    @b_code = FactoryGirl.create(:bar_code, product: @product)
-    @company = FactoryGirl.create(:company)
-    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
-    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
-    @category = FactoryGirl.create(:category, product: @product)
+    product_details_init(@product)
     @user_1 = FactoryGirl.create(:user)
     @user_2 = FactoryGirl.create(:user) 
     sign_in_as(@user_1)
@@ -79,12 +68,9 @@ feature "Check favorites" do
   end
 
   scenario "checks if a favorite can be deleted from another user" do
+    @category = FactoryGirl.create(:category)
     @product = FactoryGirl.create(:product)
-    @b_code = FactoryGirl.create(:bar_code, product: @product)
-    @company = FactoryGirl.create(:company)
-    @distributer = FactoryGirl.create(:distributer, product: @product, company: @company)
-    @manufacturer = FactoryGirl.create(:manufacturer, product: @product, company: @company)
-    @category = FactoryGirl.create(:category, product: @product)
+    product_details_init(@product)
     @user_1 = FactoryGirl.create(:user)
     @user_2 = FactoryGirl.create(:user) 
     sign_in_as(@user_1)
