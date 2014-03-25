@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Favorites</div>
+	<ul class="nav nav-pills">
+	  <li>
+	  	<%= link_to('Submit',product_path(@product),method: :patch )%>
+	  </li>
+	</ul>
+  <div style="text-align:center">
+    <%= form_for @product do |f| %>
+      <%= f.label :name %><br/>
+      <%= f.text_field :name %><br/></br>
+      <%= f.label :description %><br/>
+      <%= f.text_field :description %><br/><br/>
+      <%= f.label :picture %><br/>
+      <%= f.file_field :picture %><br/>
+      <%= f.submit "Submit change", method: :patch %>
+    <% end %>
+  </div>
+</div>

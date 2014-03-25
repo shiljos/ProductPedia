@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name,  			:null => false
       t.string :description,  	:null => false
       t.references :category
+      t.integer :owner_id
       t.timestamps
     end
   end

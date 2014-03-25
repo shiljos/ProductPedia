@@ -22,6 +22,7 @@ describe Product do
 	it { should have_many(:manufacturers)}
 	it { should have_many(:manufacture_companies).through(:manufacturers).source(:company)}
 	it { should belong_to(:category)}
+	it { should belong_to(:owner).class_name("User")}
 
 	it { should have_db_column(:name).of_type(:string).with_options(null: false)}
 	it { should have_db_column(:description).of_type(:string)}

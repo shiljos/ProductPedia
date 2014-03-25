@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
   has_many :manufacturers
   has_many :manufacture_companies, :through => :manufacturers, :source => :company
   belongs_to :category
-
+  belongs_to :owner, class_name: "User"
   
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:styles/PixarBall.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/

@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 20140321102249) do
     t.string   "name",                 null: false
     t.string   "description",          null: false
     t.integer  "category_id"
+    t.integer  "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture_file_name"

@@ -1,17 +1,35 @@
 <div class="container">
-	<div class="row">
-	  <div class="col-md-4">
-	 		<%= render "basic_product_info" %>
-		</div>
-	
-		<div class="col-md-4">
-			<%= render "ingredients" %>
-			<%= render "product_warning"%>
-	 		<%= render "nutrition_facts"%>
-		</div>
+	<% if user_signed_in? && @product.owner_id == current_user.id%>
+      <div class="row">
+        <div class="col-md-4">
+          <%= render "basic_product_info" %>
+        </div>
+      
+        <div class="col-md-4">
+          <%= render "ingredients" %>
+          <%= render "product_warning"%>
+          <%= render "nutrition_facts"%>
+        </div>
 
-		<div class="col-md-4">
-			<%= render "favorite_products" %>
-		</div>
-	</div>
+        <div class="col-md-4">
+          <%= render "moderator_products" %>
+        </div>
+      </div>
+    <%else%>
+    	<div class="row">
+    	  <div class="col-md-4">
+    	 		<%= render "basic_product_info" %>
+    		</div>
+    	
+    		<div class="col-md-4">
+    			<%= render "ingredients" %>
+    			<%= render "product_warning"%>
+    	 		<%= render "nutrition_facts"%>
+    		</div>
+
+    		<div class="col-md-4">
+    			<%= render "favorite_products" %>
+    		</div>
+    	</div>
+  <%end%>
 </div>
