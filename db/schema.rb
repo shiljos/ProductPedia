@@ -84,13 +84,6 @@ ActiveRecord::Schema.define(version: 20140321102249) do
     t.datetime "updated_at"
   end
 
-  create_table "feeds", force: true do |t|
-    t.integer  "new_info_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "ingredients", force: true do |t|
     t.string   "name",       null: false
     t.datetime "created_at"

@@ -23,9 +23,9 @@ feature "Nutrition data" do
 end
 
 feature "Warning" do
-	scenario "cheks if empty warning present" do
+	scenario "cheks if a warning warning present" do
 		@category = FactoryGirl.create(:category)
-		@product = FactoryGirl.create(:product, category: @category)
+		@product = FactoryGirl.create(:product ,category: @category)
 		product_details_init(@product)
 		visit product_path(@product)
 		expect(page).to have_css '.warning', text: "No specific warnings are currently known for this product"

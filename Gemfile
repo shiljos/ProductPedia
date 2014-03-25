@@ -10,9 +10,11 @@ gem 'devise'
 gem "paperclip", "~> 4.1"
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'will_paginate', '~> 3.0'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'ffaker'
 end
 
 group :test do

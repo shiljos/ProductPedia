@@ -1,13 +1,13 @@
 FactoryGirl.define do
 	  factory :user do
-      sequence(:email) { |n| "shiljos#{n}@example.com" }
+      email {Faker::Internet.email}
       password "12345678" 
       password_confirmation "12345678"
     end  
 
     factory :product do
-      sequence(:name) { |n| "Product #{n}" }
-      description "Description"
+      name {Faker::Product.product_name}
+      description "Some Description"
       warning ""
       category
     end
@@ -47,9 +47,9 @@ FactoryGirl.define do
     end
 
     factory :company do
-      sequence(:name) { |n| "Company #{n}" }
-      country "USA"
-      city "NY"
+      name { Faker::Company.name }
+      country {Faker::Address.country}
+      city {Faker::Address.city}
     end
 
     factory :distributer do
@@ -63,12 +63,7 @@ FactoryGirl.define do
     end
 
     factory :new_info do
-      info "blablablainfoinfo"
+      info { Faker::Lorem.sentence }
       product
-    end
-
-    factory :feed do
-      new_info
-      user
     end
 end

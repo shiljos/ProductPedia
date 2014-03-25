@@ -31,17 +31,17 @@ namespace :db do
 
 		new_infos_3 = FactoryGirl.create_list(:new_info, 3, product: @product_n)
 
-		@users.each do |user|
-			new_infos_1.each do |new_info|
-				FactoryGirl.create(:feed, user: user, new_info: new_info)
-			end
-			new_infos_2.each do |new_info|
-				FactoryGirl.create(:feed, user: user, new_info: new_info)
-			end
-			new_infos_3.each do |new_info|
-			FactoryGirl.create(:feed, user: user, new_info: new_info)
-			end
-		end
+		# @users.each do |user|
+		# 	new_infos_1.each do |new_info|
+		# 		FactoryGirl.create(:feed, user: user, new_info: new_info)
+		# 	end
+		# 	new_infos_2.each do |new_info|
+		# 		FactoryGirl.create(:feed, user: user, new_info: new_info)
+		# 	end
+		# 	new_infos_3.each do |new_info|
+		# 	FactoryGirl.create(:feed, user: user, new_info: new_info)
+		# 	end
+		# end
 
 		@products.each do |product|
 			@companies.each do |company|

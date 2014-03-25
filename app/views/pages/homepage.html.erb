@@ -1,23 +1,13 @@
 <h1>Welcome to ProductPedia</h1>
 <%if user_signed_in?%> 
-  <% list_favorite_products(current_user).each do |p| %>
-    <div class="favname">
-      <ul>
+  <div>
+    <ol class="feed">
+      <% current_user.feed.each do |f| %>    
         <li>
-          <%= p.name %>
+          <span class="content"><%= f.info %></span>
+          <span class="feedproduct">- <%= f.product.name%> </span>
         </li>
-      </ul>
-    </div>
-    <div>
-      <ol class="feed">
-        <% favorites_news_feed(current_user).each do |f| %>
-          <% if p.id == f.product_id %>     
-            <li>
-              <span class="content"><%= f.info %></span>
-            </li>
-          <%end%>
-        <%end%>
-      </ol>
-    </div>
-  <%end%>
+      <%end%>
+    </ol>
+  </div>
 <%end%>

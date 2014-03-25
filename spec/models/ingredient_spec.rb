@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Ingredient do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many(:product_ingredients) }
+  it { should have_many(:products).through(:product_ingredients)}
 end

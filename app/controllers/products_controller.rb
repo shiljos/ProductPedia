@@ -1,10 +1,11 @@
+require 'will_paginate/array'
+
 class ProductsController < ApplicationController
  before_filter :authenticate_user!, except: [:index, :update, :show]
 
   def favorite
   	@product = Product.find(params[:id])
   	@favorite = @product.favorites.build(user: current_user)
-    @fav_count = Favorite.count
   	@favorite.save
   	redirect_to @product
   end
@@ -23,6 +24,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.search(params[:search])
+    @products = @products.page(params[:page]).per_page(5)
   end
 
   def show

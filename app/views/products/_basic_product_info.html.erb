@@ -1,16 +1,16 @@
 <div class="thumbnail">
   <%= image_tag @product.picture.url(:medium), size: '150x150' %></br>
   <div class="panel panel-default">
-  	<div class="panel-heading">Product name: <%= @product.name %></div>
-  		<div class="panel-body">
-      	<p> Found in:<%= @category.name %></p>
-				<p>	Distributer: <%= @distributer.name %></p>
-				<p> Manufacturer: <%= @manufacturer.name %></p>
-				<p>	Barcode: <%= @b_code %></p>
-				<div>
-					Product description:
-					<%= text_field_tag :Description, @product.description%>
-				</div>
-			</div>	
-	</div>    
+    <div class="panel-heading">Product name: <%= @product.name %></div>
+      <div class="panel-body">
+        <p> Found in:<%= @category.name %></p>
+        <p class="distribution"> Distributer: <%= @distributer.name %></p>
+        <p class="manufacture"> Manufacturer: <%= @manufacturer.name %></p>
+        <p> Barcode: <%= @b_code %></p>
+        <div>
+          Product description:
+          <%= text_field_tag :Description, @product.description%>
+        </div>
+      </div>  
+  </div>    
 </div>

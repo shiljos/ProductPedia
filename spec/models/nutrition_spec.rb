@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Nutrition do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many(:product_nuts) }
+  it { should have_many(:products).through(:product_nuts)}
 end
