@@ -1,0 +1,40 @@
+<div class="container">
+	<% if user_signed_in? %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Product data</div>
+            <div class="panel-body">
+              <%= form_for @new_product do |f| %>
+                <%= f.label :name, "Product name" %></br>
+                <%= f.text_field :name , placeholder: "Product name" %></br>
+                <%= f.label :description, "Description" %></br>
+                <%= f.text_area :description %></br>
+                <%= f.fields_for :bar_codes do |builder|%>
+                  <%= builder.label :barcode, "Bar code" %></br>
+                  <%= builder.text_field :barcode %>
+                <% end %></br></br>
+                <%= f.label :category_id, "Category" %></br>
+                <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: "Select a category"}) %></br>
+                <%= f.label :picture, "Picture" %></br>
+                <%= f.file_field :picture %></br>
+                <%= f.label :ingredient_tokens, "Ingredients" %>        
+                <%= f.text_field :ingredient_tokens %>
+                <%= f.label :nutrition_tokens, "Nutritions" %>        
+                <%= f.text_field :nutrition_tokens %></br>
+                <%= f.label :distribution_company_tokens, "Distributer" %>        
+                <%= f.text_field :distribution_company_tokens %></br>
+                <%= f.label :manufacture_company_tokens, "Manufacturer" %>        
+                <%= f.text_field :manufacture_company_tokens %></br>
+                <%= f.submit "Submit", method: :post %>
+              <%end%>
+            </div>  
+          </div>
+      </div>
+    
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  <%end%>
+</div>

@@ -13,7 +13,14 @@ class Product < ActiveRecord::Base
   has_many :manufacture_companies, :through => :manufacturers, :source => :company
   belongs_to :category
   belongs_to :owner, class_name: "User"
-  
+
+  accepts_nested_attributes_for :bar_codes
+
+  attr_reader :ingredient_tokens
+  attr_reader :nutrition_tokens
+  attr_reader :distribution_company_tokens
+  attr_reader :manufacture_company_tokens
+
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:styles/PixarBall.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
@@ -30,4 +37,20 @@ class Product < ActiveRecord::Base
     favorite_product_ids = user.product_ids
     where("id in (?)", favorite_product_ids)
   end
+
+  def ingredient_tokens=(ids)
+    self.ingredient_ids = ids.split(",")
+  end
+
+  def nutrition_tokens=(ids)
+    self.nutrition_ids = ids.split(",")
+  end
+
+  def distribution_company_tokens=(ids)
+    self.distribution_company_ids = ids.split(",")
+  end
+
+  def manufacture_company_tokens=(ids)
+    self.manufacture_company_ids = ids.split(",")
+  end  
 end

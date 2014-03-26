@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  $("#product_ingredient_tokens").tokenInput("/ingredients.json")
+});
+
+$(function() {
+  $("#product_nutrition_tokens").tokenInput("/nutritions.json")
+});
+
+$(function() {
+  $("#product_distribution_company_tokens").tokenInput("/distributers.json")
+});
+
+$(function() {
+  $("#product_manufacture_company_tokens").tokenInput("/manufacturers.json")
+});

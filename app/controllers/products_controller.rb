@@ -19,7 +19,21 @@ class ProductsController < ApplicationController
     redirect_to @product
   end
 
+  def new
+    @new_product = Product.new
+    barcode = @new_product.bar_codes.build
+    distributer = @new_product.distribution_companies
+    manufacturer = @new_product.manufacture_companies
+  end
+
   def create
+    @new_product = Product.new(product_params)
+    #@new_product.save
+    if @new_product.save
+      redirect_to products_path
+    else
+      render 'new'
+    end
   end
 
   def index
@@ -57,6 +71,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:description, :picture)
+    params.require(:product).permit(:name, :description, :picture, :ingredient_tokens, :nutrition_tokens, :distribution_company_tokens, :manufacture_company_tokens, :category_id, :bar_codes_attributes => [:barcode])
   end
 end

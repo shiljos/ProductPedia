@@ -12,6 +12,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
+gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails'
