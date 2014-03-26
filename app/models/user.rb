@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
   def feed
     NewInfo.for_products_favored_by(self)
   end
+
+  def favorite
+    Product.favorite_list(self)
+  end
 end
 
 

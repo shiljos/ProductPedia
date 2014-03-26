@@ -25,4 +25,9 @@ class Product < ActiveRecord::Base
     	all
   	end
   end
+
+  def self.favorite_list(user)
+    favorite_product_ids = user.product_ids
+    where("id in (?)", favorite_product_ids)
+  end
 end

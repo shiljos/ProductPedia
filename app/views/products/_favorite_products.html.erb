@@ -15,7 +15,7 @@
 			<%end%>
   	</ul>
 		<ul class="list-group">
-	    <% list_favorite_products(current_user).each do |p| %>
+	    <% current_user.favorite.each do |p| %>
 	      <li class="list-group-item">
 	        <%= p.name %>
 	      </li>

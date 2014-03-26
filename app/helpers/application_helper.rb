@@ -20,13 +20,13 @@ module ApplicationHelper
 end
 
 def list_favorite_products(user)
-    favorite_list = user.favorites
-    fav_products = []
-    favorite_list.each do |fav|
-      prod = Product.find(fav.product_id)
-      fav_products << prod
-    end
-    return fav_products   
+  favorite_list = user.favorites
+  fav_products = []
+  favorite_list.each do |fav|
+    prod = Product.find(fav.product_id)
+    fav_products << prod
+  end
+  return fav_products   
 end
 
 def favorites_news_feed(user)
