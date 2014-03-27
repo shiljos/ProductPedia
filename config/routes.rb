@@ -9,12 +9,11 @@ ProductPedia::Application.routes.draw do
       delete  'remove_favorite'
   	end
   end
-
-  #resources :free_products, only: :show
-  match 'ingredients', to: 'ingredients#index',   via: :get
-  match 'nutritions',  to: 'nutritions#index',     via: :get
-  match 'distributers',  to: 'distributers#index',     via: :get
-  match 'manufacturers',  to: 'manufacturers#index',     via: :get
+  resources :product_steps
+  match 'ingredients',    to: 'ingredients#index',      via: :get
+  match 'nutritions',     to: 'nutritions#index',       via: :get
+  match 'distributers',   to: 'distributers#index',     via: :get
+  match 'manufacturers',  to: 'manufacturers#index',    via: :get
 
 
   #match 'products', to: 'products#index',  via: :get

@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
   belongs_to :category
   belongs_to :owner, class_name: "User"
 
-  accepts_nested_attributes_for :bar_codes
+  accepts_nested_attributes_for :bar_codes, :product_nuts
 
   attr_reader :ingredient_tokens
   attr_reader :nutrition_tokens

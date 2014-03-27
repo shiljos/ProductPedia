@@ -1,7 +1,7 @@
 <div class="row">
   <div class="panel panel-default">
     <div class="panel-heading">Warning</div>
-    <% if @product.warning.empty? %>
+    <% if @product.warning.blank? %>
       <p class="warning">No specific warnings are currently known for this product </p>
     <%else%>
       <p class="warning"><%= @product.warning %></p>
