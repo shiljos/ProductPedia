@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">Nutrition amounts</div>
+        <div class="panel-body">
+          <%= form_for @product do |f| %>
+            <%= f.label :distribution_company_tokens, "Distributer" %>        
+            <%= f.text_field :distribution_company_tokens , class: "form-control"%></br>
+            <%= f.label :manufacture_company_tokens, "Manufacturer" %>        
+            <%= f.text_field :manufacture_company_tokens, class: "form-control" %></br></br></br>
+            <%= f.label :warning, "Warning" %></br>
+            <%= f.text_area :warning, placeholder: "Type a warning for the product",rows: "3", cols: "35",class: "form-control"%></br> 
+            <%= f.submit 'Finish', method: :post, class: "btn btn-primary" %> 
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

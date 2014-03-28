@@ -29,8 +29,9 @@ class ProductsController < ApplicationController
   def create
     @new_product = Product.new(product_params)
     if @new_product.save
-      redirect_to product_steps_path(:p => @new_product.id)
-      #redirect_to products_path
+      session[:new_product] = @new_product.id
+      redirect_to product_steps_path
+      #redirect_to products_path(:p => @new_product.id)
     else
       render 'new'
     end
@@ -38,11 +39,12 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.search(params[:search])
-    @products = @products.page(params[:page]).per_page(5)
+    @products = @products.page(params[:page]).per_page(10)
   end
 
   def show
   	@product = Product.find(params[:id])
+    @product_import = ProductImport.new
     @b_code = @product.bar_codes.first.barcode
     @ingredients = @product.ingredients
     @nutrition_facts = @product.nutritions

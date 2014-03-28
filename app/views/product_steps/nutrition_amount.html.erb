@@ -8,10 +8,10 @@
             <% @prod_nuts.each do | prod | %>
               <br/>
               <%= label_tag prod.nutrition.name, prod.amount %> <br/>
-              <%= text_field_tag "nutrients[#{prod.id}][amount]" %><br/>
+              <%= text_field_tag "nutrients[#{prod.id}][amount]" ,nil, class: "form-control"%><br/>
             <% end %>
             <br/><br/>
-            <%= submit_tag("Submit") %>
+            <%= submit_tag("Submit", class: "btn btn-primary") %>
           <% end %> 
         </div>
       </div>       

@@ -15,5 +15,14 @@
       <%= f.file_field :picture %><br/>
       <%= f.submit "Submit change", method: :patch %>
     <% end %>
+
+    <%= form_for @product_import do |p| %>
+      <div class="field">
+        <%= p.file_field :file %>
+      </div>
+      <div class="butt3ons">
+        <%= p.submit "Import" %>
+      </div>
+    <% end %>
   </div>
 </div>

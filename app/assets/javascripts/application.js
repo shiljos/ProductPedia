@@ -23,9 +23,13 @@ $(function() {
 });
 
 $(function() {
-  $("#product_distribution_company_tokens").tokenInput("/distributers.json")
+  $("#product_distribution_company_tokens").tokenInput("/distributers.json", {
+  	tokenLimit: 1
+  });
 });
 
 $(function() {
-  $("#product_manufacture_company_tokens").tokenInput("/manufacturers.json")
+  $("#product_manufacture_company_tokens").tokenInput("/manufacturers.json", {
+  	tokenLimit: 1
+  });
 });

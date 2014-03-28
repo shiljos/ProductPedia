@@ -11,9 +11,10 @@ gem "paperclip", "~> 4.1"
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0'
-gem 'will_paginate-bootstrap'
+gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'wicked'
+gem 'roo', '~> 1.13.2'
 
 group :test, :development do
   gem 'rspec-rails'

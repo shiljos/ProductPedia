@@ -9,6 +9,11 @@ ProductPedia::Application.routes.draw do
       delete  'remove_favorite'
   	end
   end
+  resources :product_imports do
+    collection do
+      post 'import'
+    end
+  end
   resources :product_steps
   match 'ingredients',    to: 'ingredients#index',      via: :get
   match 'nutritions',     to: 'nutritions#index',       via: :get

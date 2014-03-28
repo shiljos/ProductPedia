@@ -16,10 +16,13 @@ class Product < ActiveRecord::Base
 
   accepts_nested_attributes_for :bar_codes, :product_nuts
 
-  attr_reader :ingredient_tokens
-  attr_reader :nutrition_tokens
+  attr_accessor :ingredient_tokens
+  attr_accessor :nutrition_tokens
   attr_reader :distribution_company_tokens
   attr_reader :manufacture_company_tokens
+
+  validates :name, :presence => true
+  validates :description, :presence => true
 
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:styles/PixarBall.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/

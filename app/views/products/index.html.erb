@@ -9,15 +9,15 @@
 <h1>Products</h1>
 <div class="col-md-6 col-md-offset-3">
   <div class="jumbotron">
+    <div style="text-align:left">
+      <%= button_to "New Product", new_product_path , method: :get, class: "btn btn-default"%>
+    </div>
     <div class="list-group" style="margin: 0px auto;">
       <% @products.each do |product| %>
         <%= link_to product_path(product.id), class: "list-group-item" do %>
           <%= product.name %>
         <%end%>
       <%end%>
-    </div>
-    <div>
-      <%= link_to "New Product", new_product_path%>
     </div>
     <%= will_paginate @products %>
   </div>

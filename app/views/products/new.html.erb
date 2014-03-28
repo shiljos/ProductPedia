@@ -7,28 +7,18 @@
             <div class="panel-body">
               <%= form_for @new_product do |f| %>
                 <%= f.label :name, "Product name" %></br>
-                <%= f.text_field :name , placeholder: "Product name" %></br></br>
+                <%= f.text_field :name , placeholder: "Product name", class: "form-control" %></br>
                 <%= f.label :description, "Description" %></br>
-                <%= f.text_area :description , placeholder: "Some Description" , rows: "3", cols: "35" %></br></br>
+                <%= f.text_area :description , placeholder: "Some Description" , rows: "3", cols: "35", class: "form-control" %></br>
                 <%= f.fields_for :bar_codes do |builder|%>
                   <%= builder.label :barcode, "Bar code" %></br>
-                  <%= builder.text_field :barcode , maxlength: "13"%>
-                <% end %></br></br>
+                  <%= builder.text_field :barcode , maxlength: "13", class: "form-control"%>
+                <% end %></br>
                 <%= f.label :category_id, "Category" %></br>
-                <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: "Select a category"}) %></br></br>
+                <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: "Select a category"}, class: "form-control") %></br>
                 <%= f.label :picture, "Picture" %></br>
-                <%= f.file_field :picture %></br>
-                <%= f.label :ingredient_tokens, "Ingredients" %>        
-                <%= f.text_field :ingredient_tokens %></br>
-                <%= f.label :nutrition_tokens, "Nutritions" %>        
-                <%= f.text_field :nutrition_tokens %></br>
-                <%= f.label :distribution_company_tokens, "Distributer" %>        
-                <%= f.text_field :distribution_company_tokens %></br>
-                <%= f.label :manufacture_company_tokens, "Manufacturer" %>        
-                <%= f.text_field :manufacture_company_tokens %></br>
-                <%= f.label :warning, "Warning" %></br>
-                <%= f.text_area :warning , placeholder: "Type an important warning for the product" , rows: "3", cols: "35"  %></br>
-                <%= f.submit "Submit1", method: :post %>
+                <%= f.file_field :picture , class: "btn btn-default"%></br>
+                <%= f.submit "Next", method: :post , class: "btn btn-primary"%>
               <%end%>
             </div>  
           </div>

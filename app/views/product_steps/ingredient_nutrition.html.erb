@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">Nutrition amounts</div>
+        <div class="panel-body">
+          <%= form_for @product, url: wizard_path do |f| %>
+            <%= f.label :ingredient_tokens, "Ingredients" %>        
+            <%= f.text_field :ingredient_tokens, class: "form-control" %></br>
+            <%= f.label :nutrition_tokens, "Nutritions" %>        
+            <%= f.text_field :nutrition_tokens, class: "form-control" %></br>
+            <%= f.submit 'Next', method: :post, class: "btn btn-primary" %>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
