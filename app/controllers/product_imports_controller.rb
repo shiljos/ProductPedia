@@ -5,11 +5,14 @@ class ProductImportsController < ApplicationController
   end
 
   def create
-    if params[:product_import].ni?
-
+    @product_import = ProductImport.new(params[:product_import])
+    if @product_import.save
+      # @product_import = ProductImport.new(params[:product_import])
+      # @results = @product_import.parse_spreadsheet
+      redirect_to products_path
     else
-      @product_import = ProductImport.new(params[:product_import])
-      @results = @product_import.parse_spreadsheet
+      #render :new
+      redirect_to root_path
     end
   end
 
