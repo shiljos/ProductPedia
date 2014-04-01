@@ -1,5 +1,5 @@
 class BarCode < ActiveRecord::Base
 	belongs_to :product
 
-	#validates :barcode, format: { with: /\d{13}/, message: "only 13 digits"}
+	#validates :barcode, format: { with: /\d{13} | \d{8}/, message: "8 or 13 digits"}
 end

@@ -21,6 +21,7 @@ class ProductsController < ApplicationController
 
   def new
     @new_product = Product.new
+    @product_import = ProductImport.new
     barcode = @new_product.bar_codes.build
     distributer = @new_product.distribution_companies
     manufacturer = @new_product.manufacture_companies
@@ -44,7 +45,6 @@ class ProductsController < ApplicationController
 
   def show
   	@product = Product.find(params[:id])
-    @product_import = ProductImport.new
     @b_code = @product.bar_codes.first.barcode
     @ingredients = @product.ingredients
     @nutrition_facts = @product.nutritions
@@ -61,6 +61,10 @@ class ProductsController < ApplicationController
     c.each do |category|
       @category = category if category.id == @product.category_id
     end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
   end
 
   def update

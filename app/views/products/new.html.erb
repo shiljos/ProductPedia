@@ -5,6 +5,22 @@
         <div class="panel panel-default">
           <div class="panel-heading">Product data</div>
             <div class="panel-body">
+              <p>Click below if u want to create products importing data from a file (Excel, ...)</p>
+              <a href="#" id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';" class="link">[Open]</a>
+              <span id="spoiler_id" style="display: none">
+                <a onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';" class="link">[Close]</a>
+                <%= form_for @product_import do |p| %>
+                  </br>
+                  <div class="field">
+                    <%= p.file_field :file, id: "file"%>
+                  </div></br>
+                  <div class="buttons">
+                    <%= p.submit "Import" ,class: "btn btn-primary"%>
+                  </div>
+                <% end %>
+              </span>
+
+            </br></br>
               <%= form_for @new_product do |f| %>
                 <%= f.label :name, "Product name" %></br>
                 <%= f.text_field :name , placeholder: "Product name", class: "form-control" %></br>

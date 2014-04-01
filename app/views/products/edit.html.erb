@@ -1,0 +1,26 @@
+<div class="container">
+	<% if user_signed_in? && @product.owner_id == current_user.id %>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">Edit basic product information</div>
+          <div>
+            <%= form_for @product do |f| %>
+              <%= f.label :name %><br/>
+              <%= f.text_field :name , class: "form-control" %><br/>
+              <%= f.label :description %><br/>
+              <%= f.text_field :description , class: "form-control"%><br/>
+              <%= f.label :warning %><br/>
+              <%= f.text_field :warning , class: "form-control"%><br/>
+              <%= f.label :picture %><br/>
+              <%= f.file_field :picture %><br/>
+              <%= f.submit "Submit change", method: :patch , class: "btn btn-primary"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+	<% else %>
+		<%= render status: :forbidden %>
+	<%end%>
+</div>

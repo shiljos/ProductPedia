@@ -3,7 +3,7 @@ ProductPedia::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root to: 'high_voltage/pages#show', id: 'homepage'
-  resources :products, only: [:index, :show, :new, :create, :update, :delete] do
+  resources :products, only: [:index, :show, :new, :create, :edit, :update, :delete] do
     member do
       post 	  'favorite'
       delete  'remove_favorite'

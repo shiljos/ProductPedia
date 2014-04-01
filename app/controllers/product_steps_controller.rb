@@ -1,7 +1,7 @@
 class ProductStepsController < ApplicationController
 	include Wicked::Wizard
 
-	steps :ingredient_nutrition, :nutrition_amount ,:manufact_distribute
+	steps :ingredient_nutrition, :nutrition_amount , :manufact_distribute
 
 	def show
     #@product = Product.find(params[:p])
