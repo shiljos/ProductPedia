@@ -2,8 +2,8 @@ require 'spec_helper'
 
 feature "Products list" do
   scenario "allows user to see all products" do
-    @category = FactoryGirl.create(:category)
-  	@products = FactoryGirl.create_list(:product, 5, category: @category)
+    @category = FactoryGirl.create_list(:category, 5)
+  	@products = FactoryGirl.create_list(:product, 5, category: @category.first)
     visit products_path
     @products.each do |prod|
     	expect(page).to have_css('.list-group', text: prod.name)
@@ -14,11 +14,14 @@ end
 
 feature "View product" do
 	scenario "allows user to see product information" do
-    @category = FactoryGirl.create(:category)
-	  @product = FactoryGirl.create(:product, category: @category)
+    @category = FactoryGirl.create_list(:category, 1)
+	  @product = FactoryGirl.create(:product, category: @category.first)
     product_details_init(@product)
     sign_in
 		visit products_path
+    # expect(Product.count).to eq 1
+    # expect(page).to have_link(@product.name , href: product_path(@product)) 
+    expect(page).to have_content("Products")
 		click_link(@product.name)
 		expect(page).to have_css '.panel-heading', text: @product.name
 	end
@@ -26,11 +29,10 @@ end
 
 feature "Add favorite product" do
   scenario "allows user to add a product to favorite list" do
-    @category = FactoryGirl.create(:category)
-    @product = FactoryGirl.create(:product, category: @category)
+    @category = FactoryGirl.create_list(:category, 1)
+    @product = FactoryGirl.create(:product, category: @category.first)
     product_details_init(@product)
     add_favorite
-    #expect(page).to have_css '.addfav'
     expect(page).to have_link("Remove", href: remove_favorite_product_path(@product)) 
   end
 end

@@ -3,8 +3,8 @@ require 'spec_helper'
 feature "Created feed" do
   scenario "checks if the product news are shown in the right order" do
     sign_in
-    @category = FactoryGirl.create(:category)
-    @product = FactoryGirl.create(:product, category: @category)
+    @category = FactoryGirl.create_list(:category, 1)
+    @product = FactoryGirl.create(:product, category: @category.first)
     @older_feed = FactoryGirl.create(:new_info, product: @product, created_at: 1.day.ago)
     @newer_feed = FactoryGirl.create(:new_info, product: @product, created_at: 1.hour.ago)
     product_details_init(@product)

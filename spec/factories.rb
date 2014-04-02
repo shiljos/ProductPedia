@@ -23,7 +23,7 @@ FactoryGirl.define do
     end
 
     factory :bar_code do
-      barcode "123456789098"
+      barcode "1234567890981"
       product
     end
 

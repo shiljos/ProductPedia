@@ -1,7 +1,7 @@
 require 'will_paginate/array'
 
 class ProductsController < ApplicationController
- before_filter :authenticate_user!, except: [:index, :update, :show]
+ before_filter :authenticate_user!, except: [:index, :show]
 
   def favorite
   	@product = Product.find(params[:id])
@@ -34,6 +34,7 @@ class ProductsController < ApplicationController
       redirect_to product_steps_path
       #redirect_to products_path(:p => @new_product.id)
     else
+      @product_import = ProductImport.new
       render 'new'
     end
   end
@@ -56,7 +57,6 @@ class ProductsController < ApplicationController
     @manufact = @product.manufacturers.first
     @manufacturer = Company.find(@manufact.company_id)
 
-    #@category = @product.categories.first.name
     c = Category.all
     c.each do |category|
       @category = category if category.id == @product.category_id
@@ -71,6 +71,8 @@ class ProductsController < ApplicationController
   	@product = Product.find(params[:id])
   	if @product.update_attributes(product_params)
   	  redirect_to product_path(@product)
+    else
+     render 'edit'
   	end
   end
 

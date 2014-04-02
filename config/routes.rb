@@ -19,7 +19,4 @@ ProductPedia::Application.routes.draw do
   match 'nutritions',     to: 'nutritions#index',       via: :get
   match 'distributers',   to: 'distributers#index',     via: :get
   match 'manufacturers',  to: 'manufacturers#index',    via: :get
-
-
-  #match 'products', to: 'products#index',  via: :get
 end
