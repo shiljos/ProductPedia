@@ -16,10 +16,10 @@ gem 'jquery-rails'
 gem 'wicked'
 gem 'roo', '~> 1.13.2'
 gem 'factory_girl_rails', '4.2.1'
+gem 'ffaker'
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'ffaker'
 end
 
 group :development do
