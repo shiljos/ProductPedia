@@ -1,4 +1,4 @@
-require 'factory_girl_rails'
+#require 'factory_girl_rails'
 
 namespace :db do
 	desc "Fill database with sample data"
