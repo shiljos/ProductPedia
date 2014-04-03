@@ -15,6 +15,7 @@ gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'wicked'
 gem 'roo', '~> 1.13.2'
+gem 'factory_girl_rails', '4.2.1'
 
 group :test, :development do
   gem 'rspec-rails'
@@ -32,7 +33,7 @@ gem 'unicorn'
 group :test do
 	gem "capybara-webkit"
   gem 'capybara', '2.1.0'
-  gem 'factory_girl_rails', '4.2.1'
+
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'shoulda-matchers'
 end
