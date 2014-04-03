@@ -1,0 +1,7 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: productpedia_production
+  pool: 5
+  username: productpedia
+  password:
