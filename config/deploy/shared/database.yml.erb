@@ -1,0 +1,8 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= fetch(:full_app_name) %>
+  pool: 5
+  username: <%= fetch(:application) %>
+  password: <%= fetch(:postgresql_password) %>
+  host: <%= fetch(:postgresql_host) %>

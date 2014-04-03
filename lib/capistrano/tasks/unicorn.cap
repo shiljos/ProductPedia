@@ -1,0 +1,33 @@
+# set_default(:unicorn_user, "deployer" )
+# set_default(:unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid" )
+# #set :unicorn_pid, -> {"#{fetch :shared_path}/tmp/pids/unicorn.pid"}
+# set_default(:unicorn_config, "/home/deployer/apps/dep_app/shared/config/unicorn.rb" )
+# set_default(:unicorn_log, "#{shared_path}/log/unicorn.log" )
+# set_default(:unicorn_workers, 2)
+
+
+namespace :unicorn do
+  desc "Setup Unicorn initializer and app configuration"
+  task :setup do
+    on roles(:app) do
+      #puts "asas #{fetch(:unicorn_pid)} #{shared_path}"
+      #execute :mkdir, "-p", "#{shared_path}/config"
+      #smart_template "unicorn.rb"
+      #smart_template "unicorn_init"
+      execute :chmod, "+x", "#{shared_path}/config/unicorn_init"
+      execute :sudo, "mv", "#{shared_path}/config/unicorn_init", "/etc/init.d/unicorn_#{fetch(:application)}"
+      execute :sudo, "update-rc.d", "-f", "unicorn_#{fetch(:application)}", "defaults"
+    end
+  end
+  after "deploy:setup_config", "unicorn:setup"
+
+  %w[start stop restart].each do |command|
+    desc "#{command} unicorn"
+    task command do
+      on roles(:app) do
+        execute :service, "unicorn_#{fetch(:application)}", "#{command}"
+      end
+    end
+  end
+  after "deploy:finishing", "unicorn:restart"
+end 

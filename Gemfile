@@ -21,6 +21,14 @@ group :test, :development do
   gem 'ffaker'
 end
 
+group :development do
+	gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+end
+gem 'unicorn'
+
 group :test do
 	gem "capybara-webkit"
   gem 'capybara', '2.1.0'

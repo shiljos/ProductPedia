@@ -30,19 +30,22 @@ class ProductStepsController < ApplicationController
           render_wizard @product
         end
       when :nutrition_amount
-          @nut_amounts = ProductNut.update(params[:nutrients].keys, params[:nutrients].values)
-          @nut_amounts.reject! {|p| p.errors.empty?}
-          if @nut_amounts.empty?
-            #render_step(:manufact_distribute)
-            #skip_step
-            redirect_to wizard_path(:manufact_distribute)
-            #render_wizard
-          else
-            render_step(:nutrition_amount)
+        params[:nutrients].values.each do |n|
+          if n[:amount].blank?
+            #render_step[:nutrition_amount] 
+            redirect_to :back and return 
           end
-          
+        end
+          @nut_amounts = ProductNut.update(params[:nutrients].keys, params[:nutrients].values)
+          redirect_to wizard_path(:manufact_distribute)
+          #render_step(:nutrition_amount)
+          # @nut_amounts.reject! {|p| p.errors.empty?}
+          # if @nut_amounts.empty?
+          #   redirect_to wizard_path(:manufact_distribute)
+          # else
+          #   render_step(:nutrition_amount)
+          # end  
       when :manufact_distribute
-        #puts params[:product][:distribution_company_tokens]
         if params[:product][:distribution_company_tokens].blank?
            render_step(:manufact_distribute)
         else
