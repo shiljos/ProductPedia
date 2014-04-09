@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"render",
+				"render_step"
+			],
+			[
+				"nu",
+				"nutrition_amount"
+			],
+			[
 				"manufa",
 				"manufact_distribute"
 			],
@@ -384,10 +392,6 @@
 				"bear_move"
 			],
 			[
-				"nu",
-				"numbers"
-			],
-			[
 				"first",
 				"first_and_last_sorted"
 			],
@@ -472,122 +476,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/products_controller.rb",
+			"file": "/home/shbuntu/Downloads/kibana-3.0.0/config.js",
 			"settings":
 			{
-				"buffer_size": 2294,
+				"buffer_size": 2092,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/product.rb",
+			"file": "/etc/nginx/sites-available/default",
 			"settings":
 			{
-				"buffer_size": 1905,
+				"buffer_size": 2739,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/product_nut.rb",
+			"file": "/home/shbuntu/kibana-master/docs/kibana/configuration/config.js.asciidoc",
 			"settings":
 			{
-				"buffer_size": 125,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/ingredient.rb",
-			"settings":
-			{
-				"buffer_size": 127,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/product_ingredient.rb",
-			"settings":
-			{
-				"buffer_size": 94,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/product_imports_controller.rb",
-			"settings":
-			{
-				"buffer_size": 591,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/bar_code.rb",
-			"settings":
-			{
-				"buffer_size": 153,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/product_steps/ingredient_nutrition.html.erb",
-			"settings":
-			{
-				"buffer_size": 726,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/product_steps_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2067,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/product_steps/manufact_distribute.html.erb",
-			"settings":
-			{
-				"buffer_size": 973,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/product_steps/nutrition_amount.html.erb",
-			"settings":
-			{
-				"buffer_size": 708,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/manufacturer.rb",
-			"settings":
-			{
-				"buffer_size": 87,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/distributer.rb",
-			"settings":
-			{
-				"buffer_size": 86,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/products/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 727,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/factories.rb",
-			"settings":
-			{
-				"buffer_size": 1271,
+				"buffer_size": 1267,
 				"line_ending": "Unix"
 			}
 		}
@@ -598,6 +506,14 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"s ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"se tru",
+				"Set Syntax: Ruby"
+			],
 			[
 				"set s css",
 				"Set Syntax: CSS"
@@ -808,8 +724,57 @@
 	},
 	"file_history":
 	[
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_import.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/production.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/postgresql.cap",
+		"/etc/init.d/elasticsearch",
+		"/home/shbuntu/ee-datasets/elastic-loader.sh",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/shared/nginx_unicorn.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/nginx.cap",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/shared/unicorn.rb.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/unicorn.cap",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/rbenv.cap",
+		"/home/shbuntu/rails/railstest/ProductPedia/Gemfile",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/assets.cap",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/staging.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/base.cap",
+		"/home/shbuntu/rails/railstest/ProductPedia/Capfile",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/shared/unicorn_init.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/user.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/tasks/sample_data.rake",
+		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/substitute_strings.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/application.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/devise.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/log/development.log",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/environments/production.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/products_controller.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/environments/development.rb",
+		"/home/shbuntu/Desktop/blog/lib/capistrano/tasks/base.cap",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml.example",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.example.yml",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/shared/database.yml.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/spec_helper.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/view_homepage_spec.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/devise/shared/_links.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/backtrace_silencers.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/bar_code.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/bin/bundle",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.example.yml~",
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/factories.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/index.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/distributer.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/product_steps/nutrition_amount.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/product_steps/manufact_distribute.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_ingredient.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/product_imports_controller.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/product_steps_controller.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/product_steps/ingredient_nutrition.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/manufacturer.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_nut.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/ingredient.rb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_import.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_product_warning.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/productpedia.sublime-project",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/product_details_helper.rb",
@@ -829,14 +794,9 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/product_ingredient_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/helpers/free_products_helper_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/database_cleaner.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_ingredient.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/ingredient.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/favorite_product_helpers.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/spec_helper.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/controllers/product_steps_controller_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/product_steps/ingredient_nutrition.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/ingredients_controller.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/lib/tasks/sample_data.rake",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/new.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/edit.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_broken.html.erb",
@@ -845,13 +805,9 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/devise/sessions/new.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/devise/registrations/edit.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/devise/registrations/new.html.erb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/bar_code.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/product_imports_controller.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/index.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/schema.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/routes.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/.gitignore",
-		"/home/shbuntu/rails/railstest/ProductPedia/Gemfile",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/controllers/free_products_controller_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/environments/test.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_moderator_products.html.erb",
@@ -859,11 +815,7 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_favorite_products.html.erb",
 		"/home/shbuntu/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/shbuntu/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/product_steps/nutrition_amount.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/create_product_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/factories.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/product_steps/manufact_distribute.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/jquery-dynamic-form.js",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/application.js",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/registration_helpers.rb",
@@ -872,14 +824,12 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/manufacturers_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/distributers_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_nutrition_facts.html.erb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product_nut.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/free_products_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/nutrition.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/bar_codes_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/nutritions_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
 		"/home/shbuntu/Downloads/loopj-jquery-tokeninput-201d2d1/src/jquery.tokeninput.js",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/user.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/favorite.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/new_info.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/helpers/application_helper.rb",
@@ -892,50 +842,16 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319112354_create_feeds.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/ingredient_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/nutrition_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/manufacturer.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/models/distributer.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/company_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_ingredients.html.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319081715_create_categories.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/products_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/custom.scss",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318092650_create_product_nuts.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318075245_create_bar_codes.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318090339_create_nutritions.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318132127_create_ingredients.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319082858_create_companies.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/products_page_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/user_sign_out_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/view_homepage_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319082925_create_distributers.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140321102249_create_manufacturers.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/_header.html.erb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/seeds.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/config.ru",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/session_store.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140311141917_devise_create_users.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/active_admin.css.scss",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/_footer.html.erb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/application.css",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/devise/mailer/confirmation_instructions.html.erb",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/active_admin.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/filter_parameter_logging.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/bin/bundle",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/boot.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319111648_create_new_infos.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319091458_add_product_ref_to_category.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318135401_create_product_ingredients.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/application_controller.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318091047_create_join_table.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318091446_add_amount_to_nutritions_products.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140317143644_add_devise_to_users.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/log/development.log",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
-		"/home/shbuntu/rails/danieltest",
-		"/home/shbuntu/rails/railstest/mdown/contorllers.md",
-		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/tasks/postgresql.cap",
-		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/substitute_strings.rb",
-		"/home/shbuntu/rails/railstest/dep_app/lib/capistrano/template.rb"
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/products_page_spec.rb"
 	],
 	"find":
 	{
@@ -946,6 +862,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"<open folders>,/home/shbuntu/rails/railstest/ProductPedia",
 			""
 		]
 	},
@@ -954,6 +871,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deploy_to",
+			":install",
 			"nil",
 			"attr_accessor ",
 			"builder",
@@ -1001,445 +920,92 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/products_controller.rb",
+					"file": "/home/shbuntu/Downloads/kibana-3.0.0/config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2294,
+						"buffer_size": 2092,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1782,
-								1782
+								833,
+								833
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 864.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/models/product.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1905,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1026,
-								1026
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/models/product_nut.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 125,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								125,
-								125
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/models/ingredient.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 127,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/models/product_ingredient.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 94,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/controllers/product_imports_controller.rb",
+					"buffer": 1,
+					"file": "/etc/nginx/sites-available/default",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 591,
+						"buffer_size": 2739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								234,
-								234
+								2357,
+								2357
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/models/bar_code.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 153,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								58
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/product_steps/ingredient_nutrition.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 726,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								256,
-								256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/controllers/product_steps_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2067,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1039,
-								1039
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "app/views/product_steps/manufact_distribute.html.erb",
+					"buffer": 2,
+					"file": "/home/shbuntu/kibana-master/docs/kibana/configuration/config.js.asciidoc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 973,
+						"buffer_size": 1267,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								276,
-								276
+								1002,
+								1002
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/views/product_steps/nutrition_amount.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "app/models/manufacturer.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 87,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								82,
-								82
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "app/models/distributer.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 86,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81,
-								81
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "app/views/products/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								615,
-								615
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "spec/factories.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1271,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1503,6 +1069,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"unicap",
+				"lib/capistrano/tasks/unicorn.cap"
+			],
+			[
+				"deplo",
+				"config/deploy.rb"
+			],
 			[
 				"pro",
 				"app/controllers/products_controller.rb"

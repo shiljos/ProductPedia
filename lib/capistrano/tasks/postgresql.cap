@@ -19,8 +19,8 @@ namespace :postgresql do
       postgresql_user = fetch(:application)
       postgresql_password = 'secret'
        
-      execute :sudo, "-u", "postgres", "psql", "-c", %Q{"drop database #{postgresql_database};"}
-      execute :sudo, "-u", "postgres", "psql", "-c", %Q{"drop role #{postgresql_user};"}
+      # execute :sudo, "-u", "postgres", "psql", "-c", %Q{"drop database #{postgresql_database};"}
+      # execute :sudo, "-u", "postgres", "psql", "-c", %Q{"drop role #{postgresql_user};"}
       execute :sudo, "-u", "postgres", "psql", "-c", %Q{"create user #{postgresql_user} with password '#{postgresql_password}';"}
   	  execute :sudo, "-u", "postgres", "psql", "-c", %Q{"create database #{postgresql_database} owner #{postgresql_user};"}
     end

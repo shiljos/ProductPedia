@@ -8,6 +8,9 @@ ProductPedia::Application.routes.draw do
       post 	  'favorite'
       delete  'remove_favorite'
   	end
+    collection do
+      get :autocomplete
+    end
   end
   resources :product_imports do
     collection do

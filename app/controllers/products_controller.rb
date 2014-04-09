@@ -1,7 +1,11 @@
 require 'will_paginate/array'
 
 class ProductsController < ApplicationController
- before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show]
+
+  def autocomplete
+    render json: Product.search(params[:search], fields: [{name: :text_start}], limit: 10).map(&:name)
+  end
 
   def favorite
   	@product = Product.find(params[:id])
@@ -40,8 +44,13 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.search(params[:search])
-    @products = @products.page(params[:page]).per_page(10)
+    # @products = Product.search(params[:search])
+    # @products = @products.page(params[:page]).per_page(10)
+    if params[:search].present?
+      @products = Product.search(params[:search], page: params[:page], per_page: 20)
+    else
+      @products = Product.all.page(params[:page]).per_page(20)
+    end
   end
 
   def show

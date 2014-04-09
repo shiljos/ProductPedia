@@ -33,3 +33,10 @@ $(function() {
   	tokenLimit: 1
   });
 });
+
+// $(function() {
+// 	$("#product_search").typeahead({
+// 	  name: "product",
+// 	  remote: "/products/autocomplete?search=%QUERY"
+// 	});
+// });

@@ -31,14 +31,16 @@ class Product < ActiveRecord::Base
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:styles/PixarBall.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
-  def self.search(search)
-  	if search
-      where("name LIKE ?", "%#{search}%")
-      # find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-  	else
-    	all
-  	end
-  end
+  searchkick text_start: [:name]
+
+  # def self.search(search)
+  # 	if search
+  #     where("name LIKE ?", "%#{search}%")
+  #     # find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  # 	else
+  #   	all
+  # 	end
+  # end
 
   def self.favorite_list(user)
     favorite_product_ids = user.product_ids
