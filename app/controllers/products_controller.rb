@@ -1,10 +1,11 @@
 require 'will_paginate/array'
 
 class ProductsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show, :autocomplete]
 
   def autocomplete
-    render json: Product.search(params[:search], fields: [{name: :text_start}], limit: 10).map(&:name)
+    # render json: [{"value" => "Product 1"}, {"value" => "Mercedes 1"}, {"value" => "Volvo 1" }]
+    render json: Product.search(params[:search], fields: [{name: :text_start}], limit: 10).map { |p| { "value" => p.name } }
   end
 
   def favorite

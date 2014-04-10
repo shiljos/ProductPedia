@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"product",
+				"product_search"
+			],
+			[
+				"prod",
+				"products"
+			],
+			[
 				"render",
 				"render_step"
 			],
@@ -44,10 +52,6 @@
 				"ProductImport"
 			],
 			[
-				"product",
-				"product_import"
-			],
-			[
 				"categor",
 				"category"
 			],
@@ -78,10 +82,6 @@
 			[
 				"nutri",
 				"nutrition_name"
-			],
-			[
-				"prod",
-				"product"
 			],
 			[
 				"bar",
@@ -476,26 +476,74 @@
 	"buffers":
 	[
 		{
-			"file": "/home/shbuntu/Downloads/kibana-3.0.0/config.js",
+			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 2092,
+				"buffer_size": 1688,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/etc/nginx/sites-available/default",
+			"file": "app/models/product.rb",
 			"settings":
 			{
-				"buffer_size": 2739,
+				"buffer_size": 1955,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/shbuntu/kibana-master/docs/kibana/configuration/config.js.asciidoc",
+			"file": "app/controllers/products_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1267,
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 796,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/products/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 835,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/typeahead.bundle.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/products/edit.html.erb",
+			"settings":
+			{
+				"buffer_size": 1923,
 				"line_ending": "Unix"
 			}
 		}
@@ -724,6 +772,19 @@
 	},
 	"file_history":
 	[
+		"/var/www/example.com/public_html/config.js",
+		"/etc/nginx/sites-available/example.com",
+		"/home/shbuntu/kibana-3.0.0/config.js",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/application.js",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/typeahead.bundle.js",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/products.js.coffee",
+		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/typehead.js",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
+		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml.example",
+		"/home/shbuntu/kibana-master/docs/kibana/configuration/config.js.asciidoc",
+		"/etc/nginx/sites-available/default",
+		"/home/shbuntu/Downloads/kibana-3.0.0/config.js",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/production.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/lib/capistrano/tasks/postgresql.cap",
 		"/etc/init.d/elasticsearch",
@@ -746,13 +807,11 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/initializers/devise.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/log/development.log",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/environments/production.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/products_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/product.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/environments/development.rb",
 		"/home/shbuntu/Desktop/blog/lib/capistrano/tasks/base.cap",
-		"/home/shbuntu/rails/railstest/ProductPedia/config/database.yml.example",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/database.example.yml",
 		"/home/shbuntu/rails/railstest/ProductPedia/config/deploy/shared/database.yml.erb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/spec_helper.rb",
@@ -817,7 +876,6 @@
 		"/home/shbuntu/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/create_product_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/jquery-dynamic-form.js",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/javascripts/application.js",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/support/registration_helpers.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/integration/view_product_details_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/company.rb",
@@ -828,7 +886,6 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/nutrition.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/bar_codes_controller.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/controllers/nutritions_controller.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/layouts/application.html.erb",
 		"/home/shbuntu/Downloads/loopj-jquery-tokeninput-201d2d1/src/jquery.tokeninput.js",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/favorite.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/app/models/new_info.rb",
@@ -842,16 +899,7 @@
 		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319112354_create_feeds.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/ingredient_spec.rb",
 		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/nutrition_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/company_spec.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/views/products/_ingredients.html.erb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319081715_create_categories.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/app/assets/stylesheets/custom.scss",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318092650_create_product_nuts.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318075245_create_bar_codes.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318090339_create_nutritions.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140318132127_create_ingredients.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/db/migrate/20140319082858_create_companies.rb",
-		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/products_page_spec.rb"
+		"/home/shbuntu/rails/railstest/ProductPedia/spec/models/company_spec.rb"
 	],
 	"find":
 	{
@@ -871,6 +919,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"typeahead",
 			"deploy_to",
 			":install",
 			"nil",
@@ -920,24 +969,202 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/shbuntu/Downloads/kibana-3.0.0/config.js",
+					"file": "Gemfile",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2092,
+						"buffer_size": 1688,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								833,
-								833
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/models/product.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1505,
+								1505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/products_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/products/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								223,
+								223
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/application.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -945,33 +1172,34 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 162.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/etc/nginx/sites-available/default",
+					"buffer": 7,
+					"file": "app/assets/javascripts/typeahead.bundle.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2739,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2357,
-								2357
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -981,31 +1209,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/home/shbuntu/kibana-master/docs/kibana/configuration/config.js.asciidoc",
+					"buffer": 8,
+					"file": "app/views/products/edit.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1267,
+						"buffer_size": 1923,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1002,
-								1002
+								1738,
+								1738
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1191,7 +1421,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 341.0,
+	"side_bar_width": 262.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

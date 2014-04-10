@@ -691,7 +691,7 @@
     var css = {
         wrapper: {
             position: "relative",
-            display: "inline-block"
+            // display: "block"
         },
         hint: {
             position: "absolute",
@@ -703,7 +703,7 @@
         input: {
             position: "relative",
             verticalAlign: "top",
-            backgroundColor: "transparent"
+            // backgroundColor: "transparent"
         },
         inputWithNoHint: {
             position: "relative",
@@ -711,7 +711,7 @@
         },
         dropdown: {
             position: "absolute",
-            top: "100%",
+            // top: "100%",
             left: "0",
             zIndex: "100",
             display: "none"
