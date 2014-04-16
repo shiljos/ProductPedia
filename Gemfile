@@ -35,7 +35,7 @@ gem 'unicorn'
 group :test do
 	gem "capybara-webkit"
   gem 'capybara', '2.1.0'
-
+  gem 'ci_reporter', '1.8.0'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'shoulda-matchers'
 end
