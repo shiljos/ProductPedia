@@ -86,13 +86,13 @@ feature "Check favorites" do
   end
 end
 
-feature "Search products" do
-  scenario "allows user to search for products" do
-    @products = FactoryGirl.create_list(:product, 5)
-    visit products_path
-    fill_in 'search', with: @products.first.name
-    click_button 'Search'
-    expect(page).to have_css '.list-group', text: @products.first.name
-    expect(page).to have_css '.list-group', count: 1
-  end
-end
+# feature "Search products" do
+#   scenario "allows user to search for products" do
+#     @products = FactoryGirl.create_list(:product, 5)
+#     visit products_path
+#     fill_in 'search', with: @products.first.name
+#     click_button 'Search'
+#     expect(page).to have_css '.list-group', text: @products.first.name
+#     expect(page).to have_css '.list-group', count: 1
+#   end
+# end

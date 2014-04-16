@@ -53,6 +53,9 @@ GEM
       activesupport (>= 3.0.0)
     arel (4.0.2)
     atomic (1.1.16)
+    backup (3.4.0)
+      open4 (~> 1.3.0)
+      thor (>= 0.15.4, < 2)
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
@@ -84,6 +87,9 @@ GEM
     capybara-webkit (1.1.1)
       capybara (>= 2.0.2, < 2.2.0)
       json
+    chronic (0.10.2)
+    ci_reporter (1.8.0)
+      builder (>= 2.1.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -161,6 +167,7 @@ GEM
     net-ssh (2.8.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    open4 (1.3.3)
     orm_adapter (0.5.0)
     paperclip (4.1.1)
       activemodel (>= 3.0.0)
@@ -265,6 +272,9 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    whenever (0.9.2)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
     wicked (1.0.2)
       rails (>= 3.0.7)
     will_paginate (3.0.5)
@@ -276,6 +286,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  backup
   bootstrap-sass (~> 3.1.1)
   bootstrap-will_paginate
   capistrano (~> 3.1)
@@ -284,6 +295,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.0)
   capybara (= 2.1.0)
   capybara-webkit
+  ci_reporter (= 1.8.0)
   coffee-rails (~> 4.0.0)
   database_cleaner!
   devise
@@ -304,5 +316,6 @@ DEPENDENCIES
   shoulda-matchers
   uglifier (>= 1.3.0)
   unicorn
+  whenever
   wicked
   will_paginate (~> 3.0)

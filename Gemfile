@@ -19,6 +19,8 @@ gem 'factory_girl_rails', '4.2.1'
 gem 'ffaker'
 gem 'searchkick'
 gem 'logstasher'
+gem 'backup'
+gem 'whenever', :require => false
 
 group :test, :development do
   gem 'rspec-rails'
@@ -38,6 +40,8 @@ group :test do
   gem 'ci_reporter', '1.8.0'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'shoulda-matchers'
+  gem 'simplecov-rcov'
+  gem 'simplecov'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
