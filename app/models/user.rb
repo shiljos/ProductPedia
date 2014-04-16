@@ -6,7 +6,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+  #jenkins
+  
   def feed
     NewInfo.for_products_favored_by(self)
   end
