@@ -1,4 +1,7 @@
+require 'elasticsearch/model'
 class Product < ActiveRecord::Base
+  include Elasticsearch::Model
+
   has_many :users, :through => :favorites
   has_many :favorites
   has_many :bar_codes
@@ -30,8 +33,6 @@ class Product < ActiveRecord::Base
 
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:styles/PixarBall.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
-
-  searchkick text_start: [:name]
 
   # def self.search(search)
   # 	if search

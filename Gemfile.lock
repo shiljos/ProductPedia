@@ -5,6 +5,16 @@ GIT
     database_cleaner (1.2.0)
 
 GIT
+  remote: git://github.com/elasticsearch/elasticsearch-rails.git
+  revision: cc53850add08e761b1d31fe72b7164db53347d06
+  specs:
+    elasticsearch-model (0.1.1)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.1)
+
+GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: ee996b09edb9c4f993b9a678dd9cd319c99bb20b
   specs:
@@ -108,12 +118,13 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    elasticsearch (0.4.11)
-      elasticsearch-api (= 0.4.11)
-      elasticsearch-transport (= 0.4.11)
-    elasticsearch-api (0.4.11)
+    docile (1.1.3)
+    elasticsearch (1.0.1)
+      elasticsearch-api (= 1.0.1)
+      elasticsearch-transport (= 1.0.1)
+    elasticsearch-api (1.0.1)
       multi_json
-    elasticsearch-transport (0.4.11)
+    elasticsearch-transport (1.0.1)
       faraday
       multi_json
     erubis (2.7.0)
@@ -131,7 +142,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hashie (2.1.0)
+    hashie (2.1.1)
     high_voltage (2.1.0)
     hike (1.2.3)
     i18n (0.6.9)
@@ -231,12 +242,15 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    searchkick (0.6.3)
-      activemodel
-      elasticsearch (~> 0.4.11)
-      hashie
     shoulda-matchers (2.5.0)
       activesupport (>= 3.0.0)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     spreadsheet (0.9.7)
       ruby-ole (>= 1.0)
     sprockets (2.11.0)
@@ -299,6 +313,8 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner!
   devise
+  elasticsearch-model!
+  elasticsearch-rails!
   factory_girl_rails (= 4.2.1)
   ffaker
   high_voltage
@@ -312,8 +328,9 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
-  searchkick
   shoulda-matchers
+  simplecov
+  simplecov-rcov
   uglifier (>= 1.3.0)
   unicorn
   whenever

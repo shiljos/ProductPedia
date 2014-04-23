@@ -17,12 +17,11 @@ gem 'wicked'
 gem 'roo', '~> 1.13.2'
 gem 'factory_girl_rails', '4.2.1'
 gem 'ffaker'
-gem 'searchkick'
 gem 'logstasher'
 gem 'backup'
 gem 'whenever', :require => false
-gem 'simplecov-rcov'
-gem 'simplecov'
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 
 group :test, :development do
   gem 'rspec-rails'
@@ -33,6 +32,8 @@ group :development do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'simplecov-rcov'
+  gem 'simplecov'
 end
 gem 'unicorn'
 

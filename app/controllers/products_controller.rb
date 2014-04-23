@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def autocomplete
     # render json: [{"value" => "Product 1"}, {"value" => "Mercedes 1"}, {"value" => "Volvo 1" }]
-    render json: Product.search(params[:search], fields: [{name: :text_start}], limit: 10).map { |p| { "value" => p.name } }
+    render json: Product.search(params[:search]).results.map { |p| { "value" => p.name } }
   end
 
   def favorite
@@ -48,9 +48,11 @@ class ProductsController < ApplicationController
     # @products = Product.search(params[:search])
     # @products = @products.page(params[:page]).per_page(10)
     if params[:search].present?
-      @products = Product.search(params[:search], page: params[:page], per_page: 20)
+      #@products = Product.search(params[:search])
+      @products = Product.search query: { fuzzy:  { name: params[:search] } }
     else
-      @products = Product.all.page(params[:page]).per_page(20)
+      #@products = Product.all.page(params[:page]).per_page(20)
+      @products = Product.search( query: { match_all: {} }).page(params[:page])
     end
   end
 
