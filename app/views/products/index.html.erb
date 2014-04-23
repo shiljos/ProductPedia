@@ -18,7 +18,8 @@
       <%= button_to "New Product", new_product_path , method: :get, class: "btn btn-default"%>
     </div>
     <div class="list-group" style="margin: 0px auto;">
-      <% @products.results.each do |product| %>
+    
+      <% @products.each do |product| %>
         <%= link_to product_path(product._source.id), class: "list-group-item" do %>
           <%= product._source.name %>
         <%end%>
@@ -26,4 +27,19 @@
     </div>
     <%= will_paginate @products %>
   </div>
+</div>
+
+<div id="facets" class="col-md-3">
+  <% unless @products.size < 1 %>
+    <div class="categories panel panel-default">
+      <p class="panel-heading">Category ids</p>
+      <div class="list-group">
+        <% @products.response.response['facets']['categories']['terms'].each do |c| %>
+          <%= link_to products_path, class: "list-group-item#{'active'}" do %>
+            <%="#{ c['term'] } #{ c['count'] }" %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>

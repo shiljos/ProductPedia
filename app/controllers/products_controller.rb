@@ -47,13 +47,19 @@ class ProductsController < ApplicationController
   def index
     # @products = Product.search(params[:search])
     # @products = @products.page(params[:page]).per_page(10)
-    if params[:search].present?
-      #@products = Product.search(params[:search])
-      @products = Product.search query: { fuzzy:  { name: params[:search] } }
-    else
-      #@products = Product.all.page(params[:page]).per_page(20)
-      @products = Product.search( query: { match_all: {} }).page(params[:page])
-    end
+    # if params[:search].present?
+    #   #@products = Product.search(params[:search])
+    #   @products = Product.search query: { fuzzy:  { name: params[:search] } }
+    # else
+    #   #@products = Product.all.page(params[:page]).per_page(20)
+    #   @products = Product.search( query: { match_all: {} }).page(params[:page])
+    # end
+    
+    options = {
+      category:   params[:c]
+    }
+
+    @products = Product.search(params[:search]).results
   end
 
   def show

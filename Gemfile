@@ -32,9 +32,8 @@ group :development do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'simplecov-rcov'
-  gem 'simplecov'
 end
+
 gem 'unicorn'
 
 group :test do
@@ -43,6 +42,8 @@ group :test do
   gem 'ci_reporter', '1.8.0'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'shoulda-matchers'
+  gem 'simplecov-rcov'
+  gem 'simplecov'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
