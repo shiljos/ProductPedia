@@ -3,6 +3,7 @@ ProductPedia::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root to: 'high_voltage/pages#show', id: 'homepage'
+
   resources :products, only: [:index, :show, :new, :create, :edit, :update, :delete] do
     member do
       post 	  'favorite'
@@ -12,12 +13,17 @@ ProductPedia::Application.routes.draw do
       get :autocomplete
     end
   end
+
+ # get '/search', to: 'search#index', as: 'search'
+
   resources :product_imports do
     collection do
       post 'import'
     end
   end
+
   resources :product_steps
+
   match 'ingredients',    to: 'ingredients#index',      via: :get
   match 'nutritions',     to: 'nutritions#index',       via: :get
   match 'distributers',   to: 'distributers#index',     via: :get

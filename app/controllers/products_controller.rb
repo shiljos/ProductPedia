@@ -54,12 +54,15 @@ class ProductsController < ApplicationController
     #   #@products = Product.all.page(params[:page]).per_page(20)
     #   @products = Product.search( query: { match_all: {} }).page(params[:page])
     # end
-    
+
+    #@products = Product.__elasticsearch__.search( query: { match_all: {} } ).results
+
     options = {
       category:   params[:c]
     }
 
     @products = Product.search(params[:search]).results
+
   end
 
   def show

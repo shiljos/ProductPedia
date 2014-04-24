@@ -1,6 +1,7 @@
 require 'elasticsearch/model'
 class Product < ActiveRecord::Base
   include Elasticsearch::Model
+  include Searchable
 
   has_many :users, :through => :favorites
   has_many :favorites
@@ -42,42 +43,7 @@ class Product < ActiveRecord::Base
   #   	all
   # 	end
   # end
-  #query: { fuzzy:  { name: params[:search] }
-  def self.search(query)
 
-    @search_definition = {
-
-      query: {},
-
-      filter: {},
-
-      facets: {
-        categories: {
-          terms: {
-            field: 'category_id'
-          },
-          facet_filter: {}
-        }
-      }
-    }
-
-    unless query.blank?
-      @search_definition[:query] = {
-        match: {
-          name: query
-        }
-      }
-    else 
-      @search_definition[:query] = { match_all: {} }
-    end
-
-    # if options[:category]
-    #   #f = { term: { categories: options[:category] } }
-    # end
-    
-    __elasticsearch__.search(@search_definition)
-    
-  end
 
   def self.favorite_list(user)
     favorite_product_ids = user.product_ids
