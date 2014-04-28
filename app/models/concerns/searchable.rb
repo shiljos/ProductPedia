@@ -1,31 +1,61 @@
 module Searchable
-	extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
 	included do		
 		include Elasticsearch::Model
+  
+		settings index: {} do
+		  settings analysis: {
+		    # filter: {
+		    #   filter_shingle: {
+		    #     ...
+		    #   },
+		    #   filter_stop: {
+		    #     ...
+		    #   }
+		    # },
+		    analyzer: {
+			    default: {
+			     type: 'standard'
+			    }
+		      # default_index: {
+		      #   type: 'standard'
+		      # },
+		      # default_search: {
+		      #   type: 'keyword'
+		      # }
+		    }
+		  } 
+      mapping do
+      	indexes :name, type: 'multi_field' do
+			    indexes :name, index: 'not_analyzed'
+          indexes :tokenized
+      	end
 
-		   # settings index: {} do
-    #   mapping do
-    #     indexes :ingredients, type: 'multi_field' do
-    #       indexes :ingredients
-    #       indexes :tokenized, analyzer: 'simple'
-    #     end
+    #   	indexes :ingredients do
+    #     	indexes :name, type: 'multi_field' do
+    #         indexes :name, index: 'not_analyzed'
+    #         indexes :tokenized, analyzer: 'keyword'
+    #       end
+				# end        
 
+        # indexes :category, analyzer: "keyword"
+
+    #        			
     #     indexes :manufacturers, type: 'multi_field' do
     #       indexes :manufacturers
     #       indexes :tokenized, analyzer: 'simple'
     #     end
 
-    #     indexes :category, type: 'string'
-
-    #   end
-    # end
+    #, index: 'not_analyzed'
+      end
+    end
 
 
 	  def as_indexed_json(options={})
 	    self.as_json(
 	      include: { category:               { only: :name },
-	                 ingredients:            { only: :name },
-	                 manufacture_companies:  { only: :name }
+	                 ingredients:            { only: :name }
+	                 #manufacture_companies:  { only: :name }
 	               })
 	  end
 
@@ -48,16 +78,16 @@ module Searchable
 	        },
 	        ingredients: {
 	          terms: {
-	            field: 'ingredients'
+	            field: 'ingredients.name'
 	          }, 
 	          facet_filter: {}
-	        },
-	        manufacturers: {
-	          terms: {
-	            field: 'manufacture_companies.name'
-	          },
-	          facet_filter: {}
 	        }
+	        # manufacturers: {
+	        #   terms: {
+	        #     field: 'manufacture_companies.name'
+	        #   },
+	        #   facet_filter: {}
+	        # }
 	      }
 	    }
 

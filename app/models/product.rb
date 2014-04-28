@@ -1,7 +1,8 @@
 require 'elasticsearch/model'
 class Product < ActiveRecord::Base
-  include Elasticsearch::Model
   include Searchable
+
+  after_commit :update_products_index, :on => :update
 
   has_many :users, :through => :favorites
   has_many :favorites
@@ -15,7 +16,7 @@ class Product < ActiveRecord::Base
   has_many :new_infos
   has_many :manufacturers
   has_many :manufacture_companies, :through => :manufacturers, :source => :company
-  belongs_to :category
+  belongs_to :category 
   belongs_to :owner, class_name: "User"
 
   accepts_nested_attributes_for :bar_codes, :product_nuts
@@ -44,6 +45,9 @@ class Product < ActiveRecord::Base
   # 	end
   # end
 
+  def update_products_index
+    Indexer.perform_async(:update, self.class.to_s, self.id)  
+  end
 
   def self.favorite_list(user)
     favorite_product_ids = user.product_ids

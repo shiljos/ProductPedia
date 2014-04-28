@@ -20,8 +20,10 @@ gem 'ffaker'
 gem 'logstasher'
 gem 'backup'
 gem 'whenever', :require => false
+gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
 gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'sidekiq'
 
 group :test, :development do
   gem 'rspec-rails'
