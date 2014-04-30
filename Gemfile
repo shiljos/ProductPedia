@@ -24,6 +24,7 @@ gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git
 gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'sidekiq'
+gem 'mandrill-api'
 
 group :test, :development do
   gem 'rspec-rails'
@@ -34,6 +35,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'letter_opener'
 end
 
 gem 'unicorn'

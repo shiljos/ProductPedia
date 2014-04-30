@@ -5,30 +5,37 @@ module Searchable
   
 		settings index: {} do
 		  settings analysis: {
-		    # filter: {
-		    #   filter_shingle: {
-		    #     ...
-		    #   },
-		    #   filter_stop: {
-		    #     ...
-		    #   }
-		    # },
+		    filter: {
+		      autocomplete_filter: {
+		        type: "edge_ngram",
+		        min_gram: 1,
+		        max_gram: 20
+		      }
+		    },
 		    analyzer: {
 			    default: {
-			     type: 'standard'
+			     type: "standard"
+			    },
+			    autocomplete: {
+			    	type: "custom",
+			    	tokenizer: "standard",
+			    	filter: [
+			    		"lowercase",
+			    		"autocomplete_filter"
+			    	]
 			    }
 		      # default_index: {
 		      #   type: 'standard'
 		      # },
 		      # default_search: {
-		      #   type: 'keyword'
+		      #   type: 'standard'
 		      # }
 		    }
 		  } 
       mapping do
       	indexes :name, type: 'multi_field' do
-			    indexes :name, index: 'not_analyzed'
-          indexes :tokenized
+			    indexes :name, index_analyzer: 'autocomplete', search_analyzer: 'standard'
+          indexes :raw, index: 'not_analyzed'
       	end
 
     #   	indexes :ingredients do
@@ -61,7 +68,12 @@ module Searchable
 
 
 
-	  def self.search(query)
+	  def self.search(query, options={})
+
+	  	_set_filters = lambda do |f|
+	    	@search_definition[:filter][:and] ||= []
+	    	@search_definition[:filter][:and]  |= [f]
+	    end
 
 	    @search_definition = {
 
@@ -95,8 +107,16 @@ module Searchable
 	      @search_definition[:query] = {
 	        bool: {
 	          should: [
-	            { match: { name: query } },
-	            { fuzzy: { name: query } }
+	            { match: { 
+		            	name: {
+		            	  query: query
+		            	}
+	            	}
+	            },
+	            { fuzzy: {
+	            		name: query
+	            	}
+	          	}
 	          ]
 	        }
 	      }
@@ -104,9 +124,11 @@ module Searchable
 	      @search_definition[:query] = { match_all: {} }
 	    end
 
-	    # if options[:category]
-	    #   #f = { term: { categories: options[:category] } }
-	    # end
+	    if options[:category]
+	      f = { term: { category_id: options[:category] } }
+
+	      _set_filters.(f)
+	    end
 	    
 	    __elasticsearch__.search(@search_definition)
 	    

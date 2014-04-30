@@ -7,13 +7,24 @@ ProductPedia::Application.configure do
   config.cache_classes = false
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :mandrill_delivery
+  # config.action_mailer.smtp_settings = {
+  #   address:              'smtp.gmail.com',
+  #   port:                 587,
+  #   domain:               'gmail.com',
+  #   user_name:            'shiljos',
+  #   password:             'lagannagan',
+  #   authentication:       'plain',
+  #   enable_starttls_auto: true  }
+
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              'smtp.mandrillapp.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'shiljos',
-    password:             '*yourmail*',
+    user_name:            'shiljos@gmail.com',
+    password:             '1sKnfkoiNApaL5o08AHBBQ',
     authentication:       'plain',
     enable_starttls_auto: true  }
 

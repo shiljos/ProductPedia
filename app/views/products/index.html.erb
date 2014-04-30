@@ -29,3 +29,18 @@
   </div>
 </div>
 
+<div id="facets" class="col-md-3">
+  <% unless @products.size < 1 %>
+    <div class="categories panel panel-default">
+      <p class="panel-heading">Category ids</p>
+      <div class="list-group">
+        <% @category_all.each do |c| %>
+          <%= link_to products_path do %>
+          <%= c.name %>
+          <%= params[:c]%>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div> 
