@@ -4,11 +4,11 @@ class MandrillDelivery
   attr_accessor :message
 
   def initialize(mail)
-     Rails.logger.info "KONSTRUKT"
+     #Rails.logger.info "KONSTRUKT"
   end
 
   def deliver!(mail)
-    Rails.logger.info "DELIVER"
+    #Rails.logger.info "DELIVER"
     build_meta_mandrill(mail)
     send_mandrill(mail)
   end
@@ -16,7 +16,7 @@ class MandrillDelivery
 #Message stuff
 
   def build_meta_mandrill(mail)
-    Rails.logger.info "METAMAANDRILL"
+    #Rails.logger.info "METAMAANDRILL"
     #build Mandrill message hash
     @message = {
       :from_name=> "Admin",
@@ -46,7 +46,7 @@ class MandrillDelivery
 
     sending = m.messages.send(@message)
     Rails.logger.info sending
-    Rails.logger.info "POSSLATOOOOOOOOOO"
+    #Rails.logger.info "POSSLATOOOOOOOOOO"
   end
 
 end
