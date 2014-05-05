@@ -6,8 +6,11 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  #jenkins
-  
+ 
+  after_create do
+   subscribe_to_mailchimp 
+  end
+
   def feed
     NewInfo.for_products_favored_by(self)
   end
@@ -17,4 +20,15 @@ class User < ActiveRecord::Base
   end
 end
 
+def subscribe_to_mailchimp testing=false
+   return true if (Rails.env.test? && !testing)
 
+   list_id = '03d9a5d4be'
+
+   response = Rails.configuration.mailchimp.lists.subscribe({
+    id: list_id,
+    email: {email: email},
+    double_optin: false
+    })
+   response
+end
