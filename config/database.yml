@@ -6,8 +6,8 @@
 
 development: &default
   adapter: postgresql
-  database: prodpedia_development
-  username: prodpedia
+  database: productpedia_development
+  username: productpedia
   password: secret
   host: localhost 
   encoding: utf8
@@ -17,7 +17,7 @@ development: &default
 
 test:
   <<: *default
-  database: prodpedia_test
+  database: productpedia_test
 
 
 # Warning: The database defined as "test" will be erased and
