@@ -56,11 +56,14 @@ class ProductsController < ApplicationController
     # end
 
     #@products = Product.__elasticsearch__.search( query: { match_all: {} } ).results
-    params[:c] = 4
+    #params[:c] = 4
     options = {
-      category:   params[:c]
+      category:     params[:c],
+      ingredients:  params[:i]
     }
+
     @category_all = Category.all
+    @ingredients_all = Ingredient.all
     @products = Product.search(params[:search], options).results
 
   end

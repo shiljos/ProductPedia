@@ -126,9 +126,13 @@ module Searchable
 	    end
 
 	    if options[:category]
-	      f = { term: { category_id: options[:category] } }
+	      f = { term: { 'category.name' => options[:category] } }
 
 	      _set_filters.(f)
+	    end
+
+	    if options[:ingredients]
+	    	f = { term: { 'ingredients.name' => options[:ingredients] } }
 	    end
 	    
 	    __elasticsearch__.search(@search_definition)

@@ -1,4 +1,52 @@
-<div class="col-md-6 col-md-offset-3">
+<div id="facets" class="col-md-3">
+  <% unless @products.size < 1 %>
+    <div class="thumbnail">
+      <div class="panel panel-default">
+        <p class="panel-heading">Facets Category</p>
+        <div class="list-group">
+          <% @products.response.response['facets']['categories']['terms'].each do |c| %>
+            <%= link_to products_path, class: "list-group-item" do %>
+              <%= c['term'].titleize.html_safe + content_tag(:small, c['count'] , class: 'badge').html_safe %>
+            <% end %>
+          <% end %> 
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <p class="panel-heading">Facets Ingredients</p>
+        <div class="list-group">
+          <% @products.response.response['facets']['ingredients']['terms'].each do |i| %>
+            <%= link_to products_path, class: "list-group-item" do %>
+              <%= i['term'].titleize.html_safe + content_tag(:small, i['count'] , class: 'badge').html_safe %>
+            <% end %>
+          <% end %> 
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <p class="panel-heading">Categories</p>
+        <div class="list-group">
+          <% @category_all.each do |c| %>
+            <%= link_to products_path(params.merge(c: c.name)), class: "list-group-item" do %>
+              <%= c.name.titleize.html_safe %>
+            <% end %>
+          <% end %> 
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <p class="panel-heading">Ingredients</p>
+        <div class="list-group">
+        <% @ingredients_all.each do |i| %>
+          <%= link_to products_path(params.merge(i: i.name)), class: "list-group-item" do %>
+            <%= i.name %>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %> 
+</div>
+
+<div class="col-md-6">
   <div class="center">
     <%= form_tag products_path, :method => 'get' do %>
       <div class="input-group">
@@ -29,18 +77,3 @@
   </div>
 </div>
 
-<div id="facets" class="col-md-3">
-  <% unless @products.size < 1 %>
-    <div class="categories panel panel-default">
-      <p class="panel-heading">Category ids</p>
-      <div class="list-group">
-        <% @category_all.each do |c| %>
-          <%= link_to products_path do %>
-          <%= c.name %>
-          <%= params[:c]%>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
-</div> 
