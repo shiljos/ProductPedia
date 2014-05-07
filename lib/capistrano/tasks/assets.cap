@@ -1,9 +1,9 @@
 # Updated to work with Capistrano 3 and Rails 4; compiles assets in given stage in order
 # to use settings for that stage ... rm assets when we're done
 # komentar nagios proba install
-# namespace :deploy do
-#   after :updated, "assets:precompile"
-# end
+namespace :deploy do
+  after :updated, "assets:precompile"
+end
 
 namespace :assets do
   desc "Precompile assets locally and then rsync to web servers"
