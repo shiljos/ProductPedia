@@ -2,7 +2,7 @@ module Searchable
   extend ActiveSupport::Concern
 	included do		
 		include Elasticsearch::Model
-  
+  	
 		settings index: {} do
 		  settings analysis: {
 		    filter: {
@@ -38,16 +38,17 @@ module Searchable
           indexes :raw, index: 'not_analyzed'
       	end
 
-    #   	indexes :ingredients do
-    #     	indexes :name, type: 'multi_field' do
-    #         indexes :name, index: 'not_analyzed'
-    #         indexes :tokenized, analyzer: 'keyword'
-    #       end
-				# end        
+      	indexes :ingredients do
+        	indexes :name, type: 'multi_field' do
+            indexes :name
+            indexes :tokenized, analyzer: 'keyword'
+          end
+				end        
 
-        # indexes :category, analyzer: "keyword"
-
-    #        			
+        indexes :category do
+        	indexes :name, analyzer: "keyword"
+      	end
+    
     #     indexes :manufacturers, type: 'multi_field' do
     #       indexes :manufacturers
     #       indexes :tokenized, analyzer: 'simple'
