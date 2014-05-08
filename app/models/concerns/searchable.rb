@@ -48,13 +48,15 @@ module Searchable
         indexes :category do
         	indexes :name, analyzer: "keyword"
       	end
-    
-    #     indexes :manufacturers, type: 'multi_field' do
-    #       indexes :manufacturers
-    #       indexes :tokenized, analyzer: 'simple'
-    #     end
+				
+				indexes :manufacture_companies do    
+	        indexes :name, type: 'multi_field' do
+	          indexes :name
+	          indexes :tokenized, analyzer: 'keyword'
+	        end
+      	end
 
-    #, index: 'not_analyzed'
+    # index: 'not_analyzed'
       end
     end
 
@@ -62,8 +64,8 @@ module Searchable
 	  def as_indexed_json(options={})
 	    self.as_json(
 	      include: { category:               { only: :name },
-	                 ingredients:            { only: :name }
-	                 #manufacture_companies:  { only: :name }
+	                 ingredients:            { only: :name },
+	                 manufacture_companies:  { only: :name }
 	               })
 	  end
 
@@ -94,13 +96,13 @@ module Searchable
 	            field: 'ingredients.name'
 	          }, 
 	          facet_filter: {}
+	        },
+	        manufacturers: {
+	          terms: {
+	            field: 'manufacture_companies.name.tokenized'
+	          },
+	          facet_filter: {}
 	        }
-	        # manufacturers: {
-	        #   terms: {
-	        #     field: 'manufacture_companies.name'
-	        #   },
-	        #   facet_filter: {}
-	        # }
 	      }
 	    }
 
@@ -132,7 +134,15 @@ module Searchable
 	    end
 
 	    if options[:ingredients]
-	    	f = { term: { 'ingredients.name' => options[:ingredients] } }
+	    	f = { term: { 'ingredients.name.tokenized' => options[:ingredients] } }
+
+	    	_set_filters.(f)
+	    end
+
+	    if options[:manufacturers]
+	    	f = { term: { 'manufacture_companies.tokenized' => options[:manufacturers] } }
+
+	    	_set_filters.(f)
 	    end
 	    
 	    __elasticsearch__.search(@search_definition)

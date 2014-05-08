@@ -26,6 +26,8 @@ gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-ra
 gem 'sidekiq'
 gem 'mandrill-api'
 gem 'gibbon', github: 'amro/gibbon'
+gem 'intercom-rails', '~> 0.2.24'
+
 
 group :test, :development do
   gem 'rspec-rails'

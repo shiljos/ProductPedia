@@ -21,6 +21,16 @@
           <% end %> 
         </div>
       </div>
+      <div class="panel panel-default">
+        <p class="panel-heading">Facets Manufacturers</p>
+        <div class="list-group">
+          <% @products.response.response['facets']['manufacturers']['terms'].each do |m| %>
+            <%= link_to products_path, class: "list-group-item" do %>
+              <%= m['term'].titleize.html_safe + content_tag(:small, m['count'] , class: 'badge').html_safe %>
+            <% end %>
+          <% end %> 
+        </div>
+      </div>
 
       <div class="panel panel-default">
         <p class="panel-heading">Categories</p>
